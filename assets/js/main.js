@@ -1,13 +1,34 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeSwitcher();
   initHeader();
   initNav();
   initTeam();
   initTabs();
-  initSlider();
+  initOpinie();
   initScrollReveal();
+  initFooterYear();
 });
+
+// ── DEV: Theme switcher (usunąć przed produkcją) ─────────
+function initThemeSwitcher() {
+  const btns = [...document.querySelectorAll('.dev-themes__btn')];
+  if (!btns.length) return;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const theme = btn.dataset.theme;
+      if (theme === 'default') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    });
+  });
+}
 
 // ── Header scroll shadow ──────────────────────────────────
 function initHeader() {
@@ -101,61 +122,27 @@ function initTabs() {
   });
 }
 
-// ── Testimonial slider ────────────────────────────────────
-function initSlider() {
-  const track   = document.getElementById('sliderTrack');
-  const dotsEl  = document.getElementById('sliderDots');
-  const counter = document.getElementById('sliderCounter');
-  const slides  = [...track.children];
-  const total   = slides.length;
+// ── Testimonial grid – show more / hide ──────────────────
+function initOpinie() {
+  const btn   = document.getElementById('opinieMoreBtn');
+  const extra = [...document.querySelectorAll('.testimonial-card[hidden]')];
 
-  let current = 0;
-  let timer;
+  if (!btn || !extra.length) return;
 
-  // Build dot buttons
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 'slider__dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Opinia ${i + 1} z ${total}`);
-    dot.addEventListener('click', () => { goTo(i); resetTimer(); });
-    dotsEl.appendChild(dot);
+  let expanded = false;
+
+  btn.addEventListener('click', () => {
+    expanded = !expanded;
+    extra.forEach(card => { card.hidden = !expanded; });
+    btn.innerHTML = expanded
+      ? '<i class="fa-solid fa-chevron-up" aria-hidden="true"></i> Zwiń opinie'
+      : '<i class="fa-solid fa-chevron-down" aria-hidden="true"></i> Pokaż wszystkie opinie';
+
+    if (!expanded) {
+      document.getElementById('opinie')
+        .scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
-
-  const dots = [...dotsEl.children];
-
-  function goTo(i) {
-    current = ((i % total) + total) % total;
-    track.style.transform = `translateX(-${current * 100}%)`;
-    dots.forEach((d, j) => d.classList.toggle('active', j === current));
-    counter.textContent = `${current + 1} / ${total}`;
-  }
-
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
-
-  function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(next, 7000);
-  }
-
-  document.getElementById('sliderNext').addEventListener('click', () => { next(); resetTimer(); });
-  document.getElementById('sliderPrev').addEventListener('click', () => { prev(); resetTimer(); });
-
-  // Keyboard support
-  document.getElementById('slider').addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') { next(); resetTimer(); }
-    if (e.key === 'ArrowLeft')  { prev(); resetTimer(); }
-  });
-
-  // Touch / pointer swipe
-  let startX = 0;
-  track.addEventListener('pointerdown', e => { startX = e.clientX; }, { passive: true });
-  track.addEventListener('pointerup',   e => {
-    const delta = startX - e.clientX;
-    if (Math.abs(delta) > 48) { delta > 0 ? next() : prev(); resetTimer(); }
-  }, { passive: true });
-
-  resetTimer();
 }
 
 // ── Scroll reveal (IntersectionObserver) ─────────────────
@@ -178,4 +165,10 @@ function initScrollReveal() {
   }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
   els.forEach(el => io.observe(el));
+}
+
+// ── Footer year ───────────────────────────────────────────
+function initFooterYear() {
+  const el = document.getElementById('footerYear');
+  if (el) el.textContent = new Date().getFullYear();
 }

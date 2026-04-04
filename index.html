@@ -32,14 +32,33 @@
       </a>
       <nav class="nav" id="nav" aria-label="Menu główne">
         <ul class="nav__list">
-          <li><a href="#oferta"  class="nav__link">Oferta</a></li>
+          <li><a href="#dlaczego" class="nav__link">Dlaczego my?</a></li>
           <li><a href="#kursy"   class="nav__link">Kursy</a></li>
-          <li><a href="#zespol"  class="nav__link">O nas</a></li>
           <li><a href="#cennik"  class="nav__link">Cennik</a></li>
+          <li><a href="#zespol"  class="nav__link">O nas</a></li>
           <li><a href="#opinie"  class="nav__link">Opinie</a></li>
           <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
         </ul>
       </nav>
+      <!-- DEV: theme switcher (usunąć przed produkcją) -->
+      <div class="dev-themes" aria-label="Podgląd motywu">
+        <span class="dev-themes__label">Motyw:</span>
+        <button class="dev-themes__btn active" data-theme="default"
+                title="Różowo-fioletowy"
+                style="background:linear-gradient(135deg,#d42ab8,#7432cb)"></button>
+        <button class="dev-themes__btn" data-theme="granat-zloto"
+                title="Granat + złoto"
+                style="background:linear-gradient(135deg,#0f2d5a,#c9830a)"></button>
+        <button class="dev-themes__btn" data-theme="indygo"
+                title="Ciemny indygo + niebieski"
+                style="background:linear-gradient(135deg,#1e1b4b,#4f46e5)"></button>
+        <button class="dev-themes__btn" data-theme="zielen-zloto"
+                title="Głęboka zieleń + złoto"
+                style="background:linear-gradient(135deg,#0d3b2e,#d4a017)"></button>
+        <button class="dev-themes__btn" data-theme="antracyt-niebieski"
+                title="Antracyt + niebieski"
+                style="background:linear-gradient(135deg,#1e2d3d,#2563eb)"></button>
+      </div>
       <button class="nav-toggle" id="navToggle"
               aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
@@ -53,49 +72,83 @@
     <section class="hero" id="hero">
       <div class="container hero__inner">
         <img src="assets/images/logo-white.png" alt="MATHrix" class="hero__logo">
-        <h1 class="hero__title">Przekaż swoją edukację<br>w odpowiednie ręce!</h1>
-        <p class="hero__subtitle">Postaw na doświadczenie i profesjonalizm – jesteśmy w stanie pomóc każdemu.</p>
-        <p class="hero__quote">„Matematyka to język, którym został zapisany Wszechświat"<br><em>— Galileusz</em></p>
-        <a href="#oferta" class="hero__arrow" aria-label="Przejdź do oferty">
+        <h1 class="hero__title">Matematyka przestaje<br>być problemem.</h1>
+        <p class="hero__subtitle">Korepetycje indywidualne, grupowe i kursy maturalne w Krakowie i online. Absolwenci Matematyki UJ z ponad 8-letnim doświadczeniem.</p>
+        <div class="hero__actions">
+          <a href="tel:+48577859242" class="hero__btn">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span class="hero__btn-mobile">Zadzwoń teraz</span>
+            <span class="hero__btn-desktop">577 859 242</span>
+          </a>
+          <a href="#dlaczego" class="hero__link">Dowiedz się więcej</a>
+        </div>
+        <a href="#dlaczego" class="hero__arrow" aria-label="Przejdź dalej">
           <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
         </a>
       </div>
     </section>
 
-    <!-- ═══ OFERTA ════════════════════════════════════════════════════════ -->
-    <section class="section oferta" id="oferta">
+    <!-- ═══ STATS ════════════════════════════════════════════════════════ -->
+    <div class="stats" aria-hidden="true">
+      <div class="container stats__grid">
+        <div class="stats__item">
+          <span class="stats__number">8+</span>
+          <span class="stats__label">lat doświadczenia</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">200+</span>
+          <span class="stats__label">zadowolonych uczniów</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">90%</span>
+          <span class="stats__label">wynik kursantów na maturze</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">UJ</span>
+          <span class="stats__label">absolwenci matematyki</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ DLACZEGO ══════════════════════════════════════════════════════ -->
+    <section class="section dlaczego" id="dlaczego">
       <div class="container">
-        <h2 class="section__title reveal">Oferta</h2>
-        <p class="section__lead reveal">
-          Dzięki wieloletniemu doświadczeniu i wyspecjalizowanej kadrze możemy zaoferować Ci lekcje
-          matematyki na najwyższym poziomie. Szeroka oferta pozwoli znaleźć Ci to, czego potrzebujesz
-          – prowadzimy zajęcia indywidualne, grupowe oraz profesjonalne kursy przygotowujące do
-          najważniejszych egzaminów.
-        </p>
-        <div class="oferta__grid reveal">
-          <div class="oferta__card">
-            <div class="oferta__icon" aria-hidden="true">
-              <i class="fa-solid fa-user-graduate"></i>
+        <h2 class="section__title reveal">Dlaczego MATHrix?</h2>
+        <p class="section__lead reveal">Wybierz sprawdzone centrum edukacji matematycznej w samym sercu Krakowa.</p>
+        <div class="dlaczego__grid reveal">
+
+          <div class="dlaczego__card">
+            <div class="dlaczego__icon" aria-hidden="true">
+              <i class="fa-solid fa-graduation-cap"></i>
             </div>
-            <h3 class="oferta__card-title">Zajęcia indywidualne i grupowe</h3>
-            <p class="oferta__card-text">
-              Zajęcia odbywają się w nowoczesnych salach lekcyjnych w naszym lokalu firmowym.
-              Lokalizacja w centrum Krakowa zapewni Ci dogodny dojazd – uczymy tuż przy
-              <strong>Rondzie Grzegórzeckim</strong>.
-            </p>
-            <p class="oferta__card-text">
-              Prowadzimy również lekcje <strong>ONLINE</strong> – na nowoczesnej tablicy wirtualnej
-              i tabletach graficznych. Ty potrzebujesz jedynie komputera z dostępem do internetu.
-            </p>
-            <ul class="oferta__features">
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Szkoła podstawowa i średnia</li>
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Studia wyższe</li>
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Przygotowanie do matury</li>
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Egzamin ósmoklasisty</li>
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Zajęcia stacjonarne i online</li>
-            </ul>
+            <h3>Absolwenci UJ</h3>
+            <p>Agnieszka i Mateusz ukończyli Matematykę Finansową na Uniwersytecie Jagiellońskim. Wiedzą, jak wytłumaczyć każde zagadnienie – od szkoły podstawowej po studia wyższe.</p>
           </div>
-          <div class="oferta__photo" role="img" aria-label="Nasze sale lekcyjne"></div>
+
+          <div class="dlaczego__card">
+            <div class="dlaczego__icon" aria-hidden="true">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3>Centrum Krakowa + Online</h3>
+            <p>Uczymy w nowoczesnych salach przy <strong>Rondzie Grzegórzeckim</strong> (Kotlarska 10/10) oraz w pełni wyposażone online – tablica wirtualna, tablety graficzne, materiały w PDF.</p>
+          </div>
+
+          <div class="dlaczego__card">
+            <div class="dlaczego__icon" aria-hidden="true">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3>Bezstresowa atmosfera</h3>
+            <p>U nas nie ma przymusowego wyciągania do tablicy. Twój komfort jest priorytetem – nauka matematyki staje się przyjemnością, a nie drogą przez mękę.</p>
+          </div>
+
+          <div class="dlaczego__card">
+            <div class="dlaczego__icon" aria-hidden="true">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Sprawdzone wyniki</h3>
+            <p>Średni wynik kursantów na maturze podstawowej to <strong>90%</strong>. Praktycznie każdy zaangażowany uczeń rozszerzonej trafia do najlepszych <strong>10% w Polsce</strong>.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -164,121 +217,6 @@
             </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ═══ ZESPÓŁ ════════════════════════════════════════════════════════ -->
-    <section class="section zespol" id="zespol">
-      <div class="container">
-        <h2 class="section__title reveal">O nas</h2>
-        <p class="section__lead reveal">
-          Jesteśmy zespołem ambitnych i doświadczonych osób, dla których nauczanie matematyki to
-          idealne połączenie pasji i pracy. Wierzymy, że do osiągnięcia zamierzonego celu niezbędny
-          jest bardzo dobry kontakt z uczniem – dlatego dbamy o wesołą i bezstresową atmosferę,
-          dzięki której nauka matematyki przestaje być karą.
-        </p>
-
-        <div class="team">
-          <div class="team__grid reveal">
-
-            <button class="team__card" data-member="0" aria-expanded="false">
-              <div class="team__photo-wrap">
-                <img src="assets/images/agnieszka.jpg" alt="Agnieszka" class="team__img" loading="lazy">
-                <div class="team__name-bar">
-                  <p class="team__name">Agnieszka</p>
-                  <p class="team__role">Współzałożycielka</p>
-                </div>
-              </div>
-            </button>
-
-            <button class="team__card" data-member="1" aria-expanded="false">
-              <div class="team__photo-wrap">
-                <img src="assets/images/mateusz.jpg" alt="Mateusz" class="team__img" loading="lazy">
-                <div class="team__name-bar">
-                  <p class="team__name">Mateusz</p>
-                  <p class="team__role">Współzałożyciel</p>
-                </div>
-              </div>
-            </button>
-
-            <button class="team__card" data-member="2" aria-expanded="false">
-              <div class="team__photo-wrap">
-                <img src="assets/images/paulina.jpg" alt="Paulina" class="team__img" loading="lazy">
-                <div class="team__name-bar">
-                  <p class="team__name">Paulina</p>
-                  <p class="team__role">Korepetytor</p>
-                </div>
-              </div>
-            </button>
-
-            <button class="team__card" data-member="3" aria-expanded="false">
-              <div class="team__photo-wrap">
-                <img src="assets/images/milena.jpg" alt="Milena" class="team__img" loading="lazy">
-                <div class="team__name-bar">
-                  <p class="team__name">Milena</p>
-                  <p class="team__role">Korepetytor</p>
-                </div>
-              </div>
-            </button>
-
-          </div><!-- /team__grid -->
-
-          <div class="team__bios">
-
-            <div class="team__bio" id="bio-0" hidden>
-              <div class="team__bio-inner">
-                <img src="assets/images/agnieszka.jpg" alt="Agnieszka" class="team__bio-photo" loading="lazy">
-                <div class="team__bio-content">
-                  <h3 class="team__bio-name">Agnieszka</h3>
-                  <p class="team__bio-text">Absolwentka Matematyki Finansowej na Uniwersytecie Jagiellońskim. Założycielka Centrum Edukacji MATHrix. Swoją przygodę z nauczaniem rozpoczęła ponad 8 lat temu. Uwielbiana przez swoich uczniów za atmosferę panującą na jej lekcjach i metody nauczania, które trafiają nawet do najbardziej zagorzałych przeciwników matematyki. Specjalistka w przygotowywaniu do matury rozszerzonej i pomocy studentom. Czas wolny uwielbia spędzać grając w siatkówkę oraz poznając nowe zakątki Krakowa.</p>
-                </div>
-                <button class="team__bio-close" aria-label="Zamknij">
-                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="team__bio" id="bio-1" hidden>
-              <div class="team__bio-inner">
-                <img src="assets/images/mateusz.jpg" alt="Mateusz" class="team__bio-photo" loading="lazy">
-                <div class="team__bio-content">
-                  <h3 class="team__bio-name">Mateusz</h3>
-                  <p class="team__bio-text">Absolwent Matematyki Finansowej na Uniwersytecie Jagiellońskim i współwłaściciel Centrum Edukacji MATHrix. Korepetycji udziela od 8 lat – przez ten czas pomógł wielu uczniom na wszystkich poziomach edukacji. W nauczaniu najbardziej lubi możliwość przekazywania swojego nietuzinkowego podejścia do problemów matematycznych oraz „zarażania" pasją do matematyki. Specjalizuje się w prowadzeniu zajęć przygotowujących do matury i matematyce wyższej. Jego największymi pasjami są lotnictwo i modelarstwo redukcyjne.</p>
-                </div>
-                <button class="team__bio-close" aria-label="Zamknij">
-                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="team__bio" id="bio-2" hidden>
-              <div class="team__bio-inner">
-                <img src="assets/images/paulina.jpg" alt="Paulina" class="team__bio-photo" loading="lazy">
-                <div class="team__bio-content">
-                  <h3 class="team__bio-name">Paulina</h3>
-                  <p class="team__bio-text">Studentka Architektury w języku angielskim na Politechnice Krakowskiej. Matematyki uczy już 3 lata – ma niesamowite podejście do młodszych uczniów, dlatego w CE MATHrix zajmuje się prowadzeniem zajęć dla szkoły podstawowej. Jest kreatywna i ma pozytywne nastawienie do życia, za co dzieciaki ją uwielbiają. W wolnym czasie spełnia się w swojej pasji, jaką jest taniec towarzyski.</p>
-                </div>
-                <button class="team__bio-close" aria-label="Zamknij">
-                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="team__bio" id="bio-3" hidden>
-              <div class="team__bio-inner">
-                <img src="assets/images/milena.jpg" alt="Milena" class="team__bio-photo" loading="lazy">
-                <div class="team__bio-content">
-                  <h3 class="team__bio-name">Milena</h3>
-                  <p class="team__bio-text">Studentka fizyki studiów drugiego stopnia na Uniwersytecie Jagiellońskim. Korepetycji z matematyki i fizyki udziela od początku liceum. To, co pierwotnie było pomocą koleżeńską, przerodziło się w jej drugą – obok fizyki – pasję. Dzięki kreatywności i zdobytej wiedzy z łatwością może przedstawić trudne tematy w prosty i przyjazny sposób. W wolnym czasie zajmuje się grafiką komputerową i poszerzaniem wiedzy z zakresu sztucznej inteligencji.</p>
-                </div>
-                <button class="team__bio-close" aria-label="Zamknij">
-                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-
-          </div><!-- /team__bios -->
-        </div><!-- /team -->
       </div>
     </section>
 
@@ -420,97 +358,215 @@
       </div>
     </section>
 
+    <!-- ═══ ZESPÓŁ ════════════════════════════════════════════════════════ -->
+    <section class="section zespol" id="zespol">
+      <div class="container">
+        <h2 class="section__title reveal">O nas</h2>
+        <p class="section__lead reveal">
+          Jesteśmy zespołem ambitnych i doświadczonych osób, dla których nauczanie matematyki to
+          idealne połączenie pasji i pracy. Wierzymy, że do osiągnięcia zamierzonego celu niezbędny
+          jest bardzo dobry kontakt z uczniem – dlatego dbamy o wesołą i bezstresową atmosferę,
+          dzięki której nauka matematyki przestaje być karą.
+        </p>
+
+        <div class="team">
+          <div class="team__grid reveal">
+
+            <button class="team__card" data-member="0" aria-expanded="false">
+              <div class="team__photo-wrap">
+                <img src="assets/images/agnieszka.jpg" alt="Agnieszka" class="team__img" loading="lazy">
+                <div class="team__name-bar">
+                  <p class="team__name">Agnieszka</p>
+                  <p class="team__role">Współzałożycielka</p>
+                </div>
+              </div>
+            </button>
+
+            <button class="team__card" data-member="1" aria-expanded="false">
+              <div class="team__photo-wrap">
+                <img src="assets/images/mateusz.jpg" alt="Mateusz" class="team__img" loading="lazy">
+                <div class="team__name-bar">
+                  <p class="team__name">Mateusz</p>
+                  <p class="team__role">Współzałożyciel</p>
+                </div>
+              </div>
+            </button>
+
+            <button class="team__card" data-member="2" aria-expanded="false">
+              <div class="team__photo-wrap">
+                <img src="assets/images/paulina.jpg" alt="Paulina" class="team__img" loading="lazy">
+                <div class="team__name-bar">
+                  <p class="team__name">Paulina</p>
+                  <p class="team__role">Korepetytor</p>
+                </div>
+              </div>
+            </button>
+
+            <button class="team__card" data-member="3" aria-expanded="false">
+              <div class="team__photo-wrap">
+                <img src="assets/images/milena.jpg" alt="Milena" class="team__img" loading="lazy">
+                <div class="team__name-bar">
+                  <p class="team__name">Milena</p>
+                  <p class="team__role">Korepetytor</p>
+                </div>
+              </div>
+            </button>
+
+          </div><!-- /team__grid -->
+
+          <div class="team__bios">
+
+            <div class="team__bio" id="bio-0" hidden>
+              <div class="team__bio-inner">
+                <img src="assets/images/agnieszka.jpg" alt="Agnieszka" class="team__bio-photo" loading="lazy">
+                <div class="team__bio-content">
+                  <h3 class="team__bio-name">Agnieszka</h3>
+                  <p class="team__bio-text">Absolwentka Matematyki Finansowej na Uniwersytecie Jagiellońskim. Założycielka Centrum Edukacji MATHrix. Swoją przygodę z nauczaniem rozpoczęła ponad 8 lat temu. Uwielbiana przez swoich uczniów za atmosferę panującą na jej lekcjach i metody nauczania, które trafiają nawet do najbardziej zagorzałych przeciwników matematyki. Specjalistka w przygotowywaniu do matury rozszerzonej i pomocy studentom. Czas wolny uwielbia spędzać grając w siatkówkę oraz poznając nowe zakątki Krakowa.</p>
+                </div>
+                <button class="team__bio-close" aria-label="Zamknij">
+                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="team__bio" id="bio-1" hidden>
+              <div class="team__bio-inner">
+                <img src="assets/images/mateusz.jpg" alt="Mateusz" class="team__bio-photo" loading="lazy">
+                <div class="team__bio-content">
+                  <h3 class="team__bio-name">Mateusz</h3>
+                  <p class="team__bio-text">Absolwent Matematyki Finansowej na Uniwersytecie Jagiellońskim i współwłaściciel Centrum Edukacji MATHrix. Korepetycji udziela od 8 lat – przez ten czas pomógł wielu uczniom na wszystkich poziomach edukacji. W nauczaniu najbardziej lubi możliwość przekazywania swojego nietuzinkowego podejścia do problemów matematycznych oraz „zarażania" pasją do matematyki. Specjalizuje się w prowadzeniu zajęć przygotowujących do matury i matematyce wyższej. Jego największymi pasjami są lotnictwo i modelarstwo redukcyjne.</p>
+                </div>
+                <button class="team__bio-close" aria-label="Zamknij">
+                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="team__bio" id="bio-2" hidden>
+              <div class="team__bio-inner">
+                <img src="assets/images/paulina.jpg" alt="Paulina" class="team__bio-photo" loading="lazy">
+                <div class="team__bio-content">
+                  <h3 class="team__bio-name">Paulina</h3>
+                  <p class="team__bio-text">Studentka Architektury w języku angielskim na Politechnice Krakowskiej. Matematyki uczy już 3 lata – ma niesamowite podejście do młodszych uczniów, dlatego w CE MATHrix zajmuje się prowadzeniem zajęć dla szkoły podstawowej. Jest kreatywna i ma pozytywne nastawienie do życia, za co dzieciaki ją uwielbiają. W wolnym czasie spełnia się w swojej pasji, jaką jest taniec towarzyski.</p>
+                </div>
+                <button class="team__bio-close" aria-label="Zamknij">
+                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="team__bio" id="bio-3" hidden>
+              <div class="team__bio-inner">
+                <img src="assets/images/milena.jpg" alt="Milena" class="team__bio-photo" loading="lazy">
+                <div class="team__bio-content">
+                  <h3 class="team__bio-name">Milena</h3>
+                  <p class="team__bio-text">Studentka fizyki studiów drugiego stopnia na Uniwersytecie Jagiellońskim. Korepetycji z matematyki i fizyki udziela od początku liceum. To, co pierwotnie było pomocą koleżeńską, przerodziło się w jej drugą – obok fizyki – pasję. Dzięki kreatywności i zdobytej wiedzy z łatwością może przedstawić trudne tematy w prosty i przyjazny sposób. W wolnym czasie zajmuje się grafiką komputerową i poszerzaniem wiedzy z zakresu sztucznej inteligencji.</p>
+                </div>
+                <button class="team__bio-close" aria-label="Zamknij">
+                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+          </div><!-- /team__bios -->
+        </div><!-- /team -->
+      </div>
+    </section>
+
     <!-- ═══ OPINIE ════════════════════════════════════════════════════════ -->
     <section class="section opinie" id="opinie">
       <div class="container">
-        <h2 class="section__title reveal">Opinie</h2>
+        <h2 class="section__title reveal">Co mówią uczniowie?</h2>
 
-        <div class="slider reveal" id="slider">
-          <div class="slider__track" id="sliderTrack">
+        <div class="opinie__grid reveal" id="opinieGrid">
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Jestem bardzo zadowolona z lekcji indywidualnych jak i kursu przygotowującego do matury z matematyki na poziomie podstawowym i rozszerzonym prowadzonym przez Panią Agnieszkę. Naprawdę fachowe przygotowanie do egzaminu w przemiłej atmosferze! Zawsze 200% zaangażowania, indywidualne podejście do każdego. A co najważniejsze Pani Agnieszka zawsze dawała jak najwięcej od siebie, co sprawiało, że przychodziłam na zajęcia z uśmiechem na twarzy. Dzięki profesjonalnemu przygotowaniu matura z matematyki była tylko przyjemnością!</p>
-                <footer><cite class="testimonial__author">Magda</cite></footer>
-              </blockquote>
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Jestem bardzo zadowolona z lekcji indywidualnych jak i kursu przygotowującego do matury z matematyki na poziomie podstawowym i rozszerzonym prowadzonym przez Panią Agnieszkę. Naprawdę fachowe przygotowanie do egzaminu w przemiłej atmosferze! Zawsze 200% zaangażowania, indywidualne podejście do każdego. Dzięki profesjonalnemu przygotowaniu matura z matematyki była tylko przyjemnością!</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Magda</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Polecam z całego serca! Na lekcje zaczęłam uczęszczać dopiero kilka miesięcy przed maturą. Byłam wtedy wręcz zrozpaczona moją wiedzą, a raczej jej brakiem. Dzięki pani Agnieszcze nie tylko zrozumiałam najtrudniejszy szkolny przedmiot w moim życiu, ale również uwierzyłam w to, że mogę zdać maturę z matematyki z całkiem niezłym wynikiem. Lekcje z panią Agnieszką to czysta przyjemność – zawsze w optymistycznej i przyjaznej atmosferze. Indywidualne podejście, pełno materiałów dodatkowych, dokładne tłumaczenie każdego tematu. Pani Agnieszka zawsze wkładała całe swoje serce w naukę podopiecznych ❤</p>
-                <footer><cite class="testimonial__author">Julia W.</cite></footer>
-              </blockquote>
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Polecam z całego serca! Na lekcje zaczęłam uczęszczać dopiero kilka miesięcy przed maturą. Byłam wtedy wręcz zrozpaczona moją wiedzą, a raczej jej brakiem. Dzięki pani Agnieszcze nie tylko zrozumiałam najtrudniejszy szkolny przedmiot w moim życiu, ale również uwierzyłam w to, że mogę zdać maturę z matematyki z całkiem niezłym wynikiem.</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Julia W.</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Serdecznie polecam współpracę z Panem Mateuszem. Bardzo bogaty zasób wiedzy, szeroka znajomość tematów. Zagadnienia, które dla mnie jako programisty z zakresu symulacji były abstrakcyjne, nie stanowiły żadnego wyzwania! 🙂</p>
-                <footer><cite class="testimonial__author">Łukasz</cite></footer>
-              </blockquote>
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Serdecznie polecam współpracę z Panem Mateuszem. Bardzo bogaty zasób wiedzy, szeroka znajomość tematów. Zagadnienia, które dla mnie jako programisty z zakresu symulacji były abstrakcyjne, nie stanowiły żadnego wyzwania!</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Łukasz</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Z ręką na sercu mogę polecić w pełni zaangażowaną oraz bardzo sympatyczną Panią Agnieszkę! Poza faktem, że nigdy nie miałam lepszej nauczycielki matematyki, okazało się również, że tego przedmiotu można się uczyć w przemiłej atmosferze. Współpraca i organizacja są na 6+, a zaangażowanie i atmosfera przebija skalę ocen 😊 Dzięki Pani Agnieszce wynik z matury rozszerzonej z matematyki wybił daleko poza skalę oczekiwań! Z całego serca polecam! ❤️</p>
-                <footer><cite class="testimonial__author">Paulina</cite></footer>
-              </blockquote>
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Z ręką na sercu mogę polecić w pełni zaangażowaną oraz bardzo sympatyczną Panią Agnieszkę! Poza faktem, że nigdy nie miałam lepszej nauczycielki matematyki, okazało się również, że tego przedmiotu można się uczyć w przemiłej atmosferze. Dzięki Pani Agnieszce wynik z matury rozszerzonej z matematyki wybił daleko poza skalę oczekiwań!</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Paulina</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Przerobiłem wielu korepetytorów, ale tylko jeden sprawił, że zrozumiałem podstawy matematyki do matury – był to Pan Mateusz z MATHrixa. Mój wstręt do tej nauki został okiełznany, a nawet śmiem twierdzić, że pod koniec nauki rozwiązywanie zadań zaczęło mi sprawiać przyjemność. Satysfakcja z dobrze zrobionych zadań jest bezcenna.</p>
-                <footer><cite class="testimonial__author">Szymon</cite></footer>
-              </blockquote>
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Przerobiłem wielu korepetytorów, ale tylko jeden sprawił, że zrozumiałem podstawy matematyki do matury – był to Pan Mateusz z MATHrixa. Mój wstręt do tej nauki został okiełznany, a nawet śmiem twierdzić, że pod koniec nauki rozwiązywanie zadań zaczęło mi sprawiać przyjemność.</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Szymon</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Świetne warunki, możliwość lekcji zdalnych, nauczyciele z pasją i poświęceniem, autorskie próbne matury i egzaminy ósmoklasisty, miła atmosfera – jak najbardziej polecam wszystkim.</p>
-                <footer><cite class="testimonial__author">Blanka</cite></footer>
-              </blockquote>
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Świetne warunki, możliwość lekcji zdalnych, nauczyciele z pasją i poświęceniem, autorskie próbne matury i egzaminy ósmoklasisty, miła atmosfera – jak najbardziej polecam wszystkim.</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Blanka</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Na lekcjach atmosfera zawsze była świetna. Pani Agnieszka indywidualnie podchodzi do każdego ucznia, wszystko na spokojnie tłumaczy bez stresu. Brałam korepetycje od Pani Agnieszki przez ok. 4 lata, pomogła mi niesamowicie. W klasie maturalnej dostawałam dużo dodatkowych materiałów, które ratowały mnie za każdym razem. Dzięki jej pomocy zdałam maturę za pierwszym razem. Polecam w 100%!</p>
-                <footer><cite class="testimonial__author">Patrycja</cite></footer>
-              </blockquote>
+          <article class="testimonial-card" hidden>
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Na lekcjach atmosfera zawsze była świetna. Pani Agnieszka indywidualnie podchodzi do każdego ucznia, wszystko na spokojnie tłumaczy bez stresu. Brałam korepetycje przez ok. 4 lata, pomogła mi niesamowicie. Dzięki jej pomocy zdałam maturę za pierwszym razem. Polecam w 100%!</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Patrycja</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Z pełną świadomością polecam Centrum Edukacji MATHrix, a w szczególności Pana Mateusza. Pan Mateusz przygotowywał mojego syna do egzaminu ósmoklasisty. Syn uczęszczał na lekcje bardzo chętnie, został świetnie przygotowany. Zawsze mógł skorzystać z pomocy dodatkowej online. Pan Mateusz zawsze był chętny do pomocy. POLECAM TĘ SZKOŁĘ!</p>
-                <footer><cite class="testimonial__author">Marcel</cite></footer>
-              </blockquote>
+          <article class="testimonial-card" hidden>
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Z pełną świadomością polecam Centrum Edukacji MATHrix, a w szczególności Pana Mateusza. Pan Mateusz przygotowywał mojego syna do egzaminu ósmoklasisty. Syn uczęszczał na lekcje bardzo chętnie, został świetnie przygotowany. Zawsze mógł skorzystać z pomocy dodatkowej online. POLECAM TĘ SZKOŁĘ!</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Marcel</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Osobiście chodziłam do MATHrixa na kurs przygotowujący do matury rozszerzonej oraz lekcje indywidualne – co uważam za bardzo dobre połączenie. Sam kurs był bardzo pomocny i obejmował wszystkie zagadnienia do egzaminu. Lekcje z panią Agnieszką to sama przyjemność – świetna atmosfera i indywidualne podejście. Nie dość, że naprawdę polubiłam matematykę, to zrobiłam duży progres, o którym wcześniej bym nie pomyślała. Jedyne, czego żałuję, to że nie znalazłam się tam wcześniej! ❤️🥰 Ogromnie polecam!</p>
-                <footer><cite class="testimonial__author">Julia B.</cite></footer>
-              </blockquote>
+          <article class="testimonial-card" hidden>
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Osobiście chodziłam do MATHrixa na kurs przygotowujący do matury rozszerzonej oraz lekcje indywidualne. Sam kurs był bardzo pomocny i obejmował wszystkie zagadnienia do egzaminu. Lekcje z panią Agnieszką to sama przyjemność – świetna atmosfera i indywidualne podejście. Nie dość, że naprawdę polubiłam matematykę, to zrobiłam duży progres. Jedyne, czego żałuję, to że nie znalazłam się tam wcześniej!</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Julia B.</cite></footer>
+          </article>
 
-            <div class="slider__slide">
-              <blockquote class="testimonial">
-                <p class="testimonial__text">Lekcje pomogły w opanowaniu całego materiału licealnego na poziomie rozszerzonym. Genialna atmosfera, młodzieżowe podejście oraz klarowny przekaz najtrudniejszych zagadnień. Po dwóch latach zajęć jestem zachwycony – nie był to zmarnowany czas ani przez sekundę. Bardzo polecam!</p>
-                <footer><cite class="testimonial__author">Artur</cite></footer>
-              </blockquote>
+          <article class="testimonial-card" hidden>
+            <div class="testimonial-card__stars" aria-label="5 na 5 gwiazdek">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
+            <blockquote><p class="testimonial-card__text">Lekcje pomogły w opanowaniu całego materiału licealnego na poziomie rozszerzonym. Genialna atmosfera, młodzieżowe podejście oraz klarowny przekaz najtrudniejszych zagadnień. Po dwóch latach zajęć jestem zachwycony – nie był to zmarnowany czas ani przez sekundę. Bardzo polecam!</p></blockquote>
+            <footer class="testimonial-card__footer"><cite class="testimonial-card__author">Artur</cite></footer>
+          </article>
 
-          </div><!-- /slider__track -->
+        </div><!-- /opinie__grid -->
 
-          <div class="slider__controls">
-            <button class="slider__btn" id="sliderPrev" aria-label="Poprzednia opinia">
-              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <div class="slider__dots" id="sliderDots" aria-label="Nawigacja opinii"></div>
-            <button class="slider__btn" id="sliderNext" aria-label="Następna opinia">
-              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </button>
-          </div>
-          <p class="slider__counter" aria-live="polite" id="sliderCounter">1 / 10</p>
-        </div><!-- /slider -->
+        <div class="opinie__more reveal">
+          <button class="opinie__more-btn" id="opinieMoreBtn">
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i> Pokaż wszystkie opinie
+          </button>
+        </div>
 
       </div>
     </section>
@@ -592,10 +648,18 @@
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <p>© 2024 Centrum Edukacji MATHrix. Wszelkie prawa zastrzeżone.</p>
+        <p>© <span id="footerYear">2025</span> Centrum Edukacji MATHrix. Wszelkie prawa zastrzeżone.</p>
       </div>
     </div>
   </footer>
+
+  <!-- ═══ MOBILE CTA ════════════════════════════════════════════════════ -->
+  <div class="mobile-cta" role="complementary" aria-label="Szybki kontakt">
+    <a href="tel:+48577859242" class="mobile-cta__link">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i>
+      <span>Zadzwoń teraz &nbsp;·&nbsp; 577 859 242</span>
+    </a>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
