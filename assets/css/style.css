@@ -1265,35 +1265,3 @@ button {
 
 .footer__bottom p { font-size: 0.8rem; opacity: 0.65; }
 
-/* ── 15. MOBILE CTA ────────────────────────────────────── */
-.mobile-cta { display: none; }
-
-@media (max-width: 640px) {
-  .mobile-cta {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    inset-inline: 0;
-    z-index: 300;
-    background: var(--grad);
-    padding: 0.875rem 1.25rem;
-    padding-bottom: calc(0.875rem + env(safe-area-inset-bottom, 0px));
-    box-shadow: 0 -4px 24px rgba(116, 50, 203, 0.28);
-  }
-
-  body { padding-bottom: 56px; }
-}
-
-.mobile-cta__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  color: white;
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.01em;
-}
-
-.mobile-cta__link i { font-size: 1.1rem; }
