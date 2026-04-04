@@ -1,64 +1,706 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" data-theme="dark-premium">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MATHrix v2 – Centrum Edukacji Matematycznej w Krakowie</title>
-  <meta name="description" content="Centrum Edukacji MATHrix w Krakowie – korepetycje z matematyki indywidualne i grupowe, kursy maturalne.">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <title>MATHrix – Centrum Edukacji Matematycznej w Krakowie</title>
+  <meta name="description" content="Centrum Edukacji MATHrix w Krakowie – korepetycje z matematyki indywidualne i grupowe, kursy maturalne. Doświadczona kadra, świetna atmosfera, indywidualne podejście.">
+  <link rel="icon" href="assets/images/logo.png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6208XL6E9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z6208XL6E9');
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/v2.css">
 </head>
 <body>
 
-  <!-- ═══ HEADER ═══════════════════════════════════════════════════════════ -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="#" class="header__logo">
-        <img src="assets/images/logo.png" alt="MATHrix" height="38">
+  <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+  <header id="header">
+    <div class="nav-container">
+
+      <a href="#" class="logo" aria-label="MATHrix – strona główna">
+        <img src="assets/images/logo.png"       alt="MATHrix" class="logo-img logo-light">
+        <img src="assets/images/logo-white.png" alt="MATHrix" class="logo-img logo-dark">
       </a>
 
-      <!-- DEV: version switcher (usunąć przed produkcją) -->
+      <nav id="nav" aria-label="Nawigacja główna">
+        <ul class="nav-links">
+          <li><a href="#dlaczego" class="nav-link">Dlaczego my?</a></li>
+          <li><a href="#kursy"    class="nav-link">Kursy</a></li>
+          <li><a href="#cennik"   class="nav-link">Cennik</a></li>
+          <li><a href="#o-nas"    class="nav-link">O nas</a></li>
+          <li><a href="#opinie"   class="nav-link">Opinie</a></li>
+          <li><a href="#kontakt"  class="nav-link">Kontakt</a></li>
+          <li class="nav-link-phone">
+            <a href="tel:+48577859242" class="btn btn-nav-cta nav-phone-mobile">
+              <i class="fa-solid fa-phone"></i> 577 859 242
+            </a>
+          </li>
+        </ul>
+      </nav>
+
       <div class="dev-versions">
         <a href="index.html" class="dev-versions__btn">v1</a>
         <a href="v2.html"    class="dev-versions__btn active">v2</a>
       </div>
-      <!-- DEV: theme switcher (usunąć przed produkcją) -->
-      <div class="dev-themes" aria-label="Podgląd motywu">
-        <span class="dev-themes__label">Motyw:</span>
-        <button class="dev-themes__btn active" data-theme="default"
-                title="Różowo-fioletowy"
-                style="background:linear-gradient(135deg,#d42ab8,#7432cb)"></button>
-        <button class="dev-themes__btn" data-theme="granat-zloto"
-                title="Granat + złoto"
-                style="background:linear-gradient(135deg,#0f2d5a,#c9830a)"></button>
-        <button class="dev-themes__btn" data-theme="indygo"
-                title="Ciemny indygo + niebieski"
-                style="background:linear-gradient(135deg,#1e1b4b,#4f46e5)"></button>
-        <button class="dev-themes__btn" data-theme="zielen-zloto"
-                title="Głęboka zieleń + złoto"
-                style="background:linear-gradient(135deg,#0d3b2e,#d4a017)"></button>
-        <button class="dev-themes__btn" data-theme="antracyt-niebieski"
-                title="Antracyt + niebieski"
-                style="background:linear-gradient(135deg,#1e2d3d,#2563eb)"></button>
+
+      <div class="nav-right">
+        <div class="theme-switcher" aria-label="Wybierz motyw kolorystyczny">
+          <button class="theme-dot active" data-theme="dark-premium"
+            title="Dark Premium"
+            style="background:linear-gradient(135deg,#7c3aed,#3b82f6)"></button>
+          <button class="theme-dot" data-theme="dark-matrix"
+            title="Dark MATHrix"
+            style="background:linear-gradient(135deg,#00c853,#00bcd4)"></button>
+          <button class="theme-dot" data-theme="light-modern"
+            title="Light Modern"
+            style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"></button>
+          <button class="theme-dot" data-theme="light-warm"
+            title="Light Warm"
+            style="background:linear-gradient(135deg,#0a1f3f,#c9830a)"></button>
+        </div>
+
+        <a href="tel:+48577859242" class="btn btn-nav-cta">
+          <i class="fa-solid fa-phone"></i>
+          <span class="hide-mobile">577 859 242</span>
+          <span class="show-mobile">Zadzwoń</span>
+        </a>
+
+        <button class="hamburger" id="hamburger"
+          aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+
     </div>
   </header>
 
   <main>
-    <section class="hero" id="hero">
-      <div class="container hero__inner">
-        <img src="assets/images/logo-white.png" alt="MATHrix" class="hero__logo">
-        <h1 class="hero__title">Hello World v2</h1>
-        <p class="hero__subtitle">Tu powstanie druga wersja strony MATHrix.</p>
+
+    <!-- ═══════════════════════════════ HERO ═════════════════════════════════ -->
+    <section id="hero" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-badge reveal">
+            <i class="fa-solid fa-location-dot"></i>
+            Kraków · Rondo Grzegórzeckie · Online
+          </div>
+
+          <h1 class="hero-title reveal">
+            Matematyka<br>
+            przestaje być<br>
+            <span class="text-gradient">problemem.</span>
+          </h1>
+
+          <p class="hero-sub reveal">
+            Korepetycje indywidualne, grupowe i kursy maturalne
+            w Krakowie i online. Absolwenci Matematyki UJ
+            z ponad 8-letnim doświadczeniem.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="tel:+48577859242" class="btn btn-primary">
+              <i class="fa-solid fa-phone"></i>
+              <span class="hide-mobile">577 859 242</span>
+              <span class="show-mobile">Zadzwoń teraz</span>
+            </a>
+            <a href="#dlaczego" class="btn btn-ghost">
+              Dowiedz się więcej <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════ STATS ════════════════════════════════ -->
+    <section id="stats" class="stats-strip" aria-label="Nasze liczby">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-number">
+            <span class="stat-count" data-target="8">0</span><span class="stat-sfx">+</span>
+          </div>
+          <span class="stat-label">lat doświadczenia</span>
+        </div>
+        <div class="stat">
+          <div class="stat-number">
+            <span class="stat-count" data-target="200">0</span><span class="stat-sfx">+</span>
+          </div>
+          <span class="stat-label">zadowolonych uczniów</span>
+        </div>
+        <div class="stat">
+          <div class="stat-number">
+            <span class="stat-count" data-target="90">0</span><span class="stat-sfx">%</span>
+          </div>
+          <span class="stat-label">wynik kursantów na maturze</span>
+        </div>
+        <div class="stat">
+          <div class="stat-number">
+            <span class="stat-text">UJ</span>
+          </div>
+          <span class="stat-label">absolwenci matematyki</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ DLACZEGO MATHrix ════════════════════════════ -->
+    <section id="dlaczego" class="section">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-tag reveal">Dlaczego MATHrix?</p>
+          <h2 class="section-title reveal">Wybierz sprawdzone centrum<br>edukacji matematycznej.</h2>
+          <p class="section-lead reveal">Nie jesteśmy anonimową korporacją — jesteśmy pasjonatami matematyki z Krakowa, którym zależy na Twoich wynikach.</p>
+        </header>
+
+        <div class="cards-4">
+          <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Absolwenci UJ</h3>
+            <p>Agnieszka i Mateusz – absolwenci Matematyki Finansowej UJ. Tłumaczymy wszystko jasno, od podstawówki po studia.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>Kraków + Online</h3>
+            <p>Nowoczesne sale przy Rondzie Grzegórzeckim oraz pełne zajęcia online – tablica wirtualna, tablet graficzny, materiały PDF.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-face-smile"></i></div>
+            <h3>Bezstresowa atmosfera</h3>
+            <p>Nikt nie jest wyciągany do tablicy. Spokojne tempo, dobre pytania i atmosfera, w której każdy czuje się swobodnie.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Sprawdzone wyniki</h3>
+            <p>Średni wynik kursantów: <strong>90%</strong> na maturze podstawowej. Rozszerzona: regularnie <strong>top 10% w Polsce</strong>.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════ KURSY MATURALNE ═══════════════════════════════ -->
+    <section id="kursy" class="section section-alt">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-tag reveal">Kursy Maturalne</p>
+          <h2 class="section-title reveal">Matura z matematyki<br>nie musi być traumą.</h2>
+          <p class="section-lead reveal">90% naszych kursantów wychodzi z egzaminu zadowolonych. Online, w małej grupie, z planem — nie z nadzieją.</p>
+        </header>
+
+        <div class="kursy-layout">
+
+          <ul class="kursy-features reveal">
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <div><strong>Prowadzą doświadczeni absolwenci UJ</strong> – nie przypadkowi studenci z ogłoszenia, a Agnieszka i Mateusz Kopeć z ponad 8-letnim stażem.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <div><strong>Nauka bez stresu</strong> – dokładne tłumaczenia i gotowe notatki PDF po każdych zajęciach. Żaden temat nie zostaje bez wyjaśnienia.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <div><strong>Komfort</strong> – kurs prowadzony wyłącznie online, możesz uczestniczyć nawet podczas wyjazdu czy choroby.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <div><strong>Zgodny z wymaganiami CKE</strong> – materiał przerabiany dokładnie tak, jak oczekuje tego egzaminator. Żadnych luk przed maturą.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <div><strong>Pakiety powtórzeniowe</strong> – autorskie opracowania całej wymaganej teorii oraz zestawy zadań do kompleksowej powtórki.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <div><strong>Darmowe matury próbne i konsultacje</strong> – autorskie próbne matury z przerobionego materiału oraz comiesięczne konsultacje.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <div><strong>Wiesz, co przerabiasz i kiedy</strong> – przejrzysty plan na cały rok, bez niespodzianek tydzień przed maturą.</div>
+            </li>
+          </ul>
+
+          <div class="kursy-cards reveal">
+            <div class="kurs-card">
+              <div class="kurs-card-top">
+                <div class="kurs-card-label">
+                  <div class="kurs-badge">Podstawowa</div>
+                  <h3>Matura Podstawowa</h3>
+                </div>
+                <div class="kurs-card-price-wrap">
+                  <div class="kurs-price">429 <span>zł / msc</span></div>
+                  <div class="kurs-rate">47,5 zł/h</div>
+                </div>
+              </div>
+              <hr class="kurs-hr">
+              <ul class="kurs-details">
+                <li><i class="fa-regular fa-calendar"></i> 32 × 2h 15min</li>
+                <li><i class="fa-regular fa-clock"></i> Środy 19:00</li>
+                <li><i class="fa-regular fa-calendar-days"></i> 10 września – 29 kwietnia</li>
+                <li><i class="fa-solid fa-trophy"></i> Średni wynik kursantów 23/24: <strong>90%</strong></li>
+              </ul>
+              <a href="tel:+48577859242" class="btn btn-outline btn-full">Zadzwoń i zapisz się</a>
+            </div>
+
+            <div class="kurs-card">
+              <div class="kurs-card-top">
+                <div class="kurs-card-label">
+                  <div class="kurs-badge">Rozszerzona</div>
+                  <h3>Matura Rozszerzona</h3>
+                </div>
+                <div class="kurs-card-price-wrap">
+                  <div class="kurs-price">439 <span>zł / msc</span></div>
+                  <div class="kurs-rate">49 zł/h</div>
+                </div>
+              </div>
+              <hr class="kurs-hr">
+              <ul class="kurs-details">
+                <li><i class="fa-regular fa-calendar"></i> 32 × 2h 15min</li>
+                <li><i class="fa-regular fa-clock"></i> Środy 19:00</li>
+                <li><i class="fa-regular fa-calendar-days"></i> 10 września – 29 kwietnia</li>
+                <li><i class="fa-solid fa-trophy"></i> Regularnie <strong>top 10% w Polsce</strong></li>
+              </ul>
+              <a href="tel:+48577859242" class="btn btn-primary btn-full">Zadzwoń i zapisz się</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CENNIK ═══════════════════════════════════ -->
+    <section id="cennik" class="section">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-tag reveal">Cennik</p>
+          <h2 class="section-title reveal">Przejrzysty cennik.</h2>
+          <p class="section-lead reveal">Kwoty podane są cenami brutto za jedną 60-minutową lekcję.</p>
+        </header>
+
+        <div class="tabs reveal" role="tablist" aria-label="Rodzaj zajęć">
+          <button class="tab-btn active" role="tab" aria-selected="true"
+            aria-controls="panel-indywidualne" id="tab-indywidualne"
+            data-tab="indywidualne">Korepetycje indywidualne</button>
+          <button class="tab-btn" role="tab" aria-selected="false"
+            aria-controls="panel-grupowe" id="tab-grupowe"
+            data-tab="grupowe">Korepetycje w grupie</button>
+          <button class="tab-btn" role="tab" aria-selected="false"
+            aria-controls="panel-kursy" id="tab-kursy"
+            data-tab="kursy">Kursy maturalne</button>
+        </div>
+
+        <div class="tabs-content">
+
+        <div class="tab-panel active" id="panel-indywidualne"
+          role="tabpanel" aria-labelledby="tab-indywidualne">
+          <p class="tab-note">
+            <i class="fa-solid fa-circle-info"></i>
+            Pakiet 8 lekcji – min. 2 lekcje/tydzień &nbsp;·&nbsp;
+            Pakiet 4 lekcji – 1 lekcja/tydzień &nbsp;·&nbsp;
+            Ważność pakietu: 30 dni
+          </p>
+          <div class="price-table-wrap">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Szkoła podstawowa / Średnia</th>
+                  <th>Studia i zajęcia w sobotę</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pakiet 8 lekcji</td>
+                  <td class="price-cell">125 zł/h</td>
+                  <td class="price-cell">160 zł/h</td>
+                </tr>
+                <tr>
+                  <td>Pakiet 4 lekcji</td>
+                  <td class="price-cell">130 zł/h</td>
+                  <td class="price-cell">160 zł/h</td>
+                </tr>
+                <tr>
+                  <td>1 lekcja bez pakietu</td>
+                  <td class="price-cell">140 zł/h</td>
+                  <td class="price-cell">160 zł/h</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="assets/docs/regulamin-indywidualne.pdf" target="_blank" rel="noopener" class="pdf-link">
+            <i class="fa-solid fa-file-pdf"></i>
+            Regulamin korepetycji indywidualnych
+          </a>
+        </div>
+
+        <div class="tab-panel" id="panel-grupowe"
+          role="tabpanel" aria-labelledby="tab-grupowe">
+          <p class="tab-note">
+            <i class="fa-solid fa-circle-info"></i>
+            Grupy 2–8 uczniów w tym samym materiale. Zajęcia stacjonarnie lub online.
+          </p>
+          <div class="price-table-wrap">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Szkoła podstawowa / Średnia</th>
+                  <th>Studia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Grupa 2-osobowa</td>
+                  <td class="price-cell">90 zł/os.</td>
+                  <td class="price-cell">100 zł/os.</td>
+                </tr>
+                <tr>
+                  <td>Grupa 3-osobowa</td>
+                  <td class="price-cell">80 zł/os.</td>
+                  <td class="price-cell">90 zł/os.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="assets/docs/regulamin-grupowe.pdf" target="_blank" rel="noopener" class="pdf-link">
+            <i class="fa-solid fa-file-pdf"></i>
+            Regulamin korepetycji grupowych
+          </a>
+        </div>
+
+        <div class="tab-panel" id="panel-kursy"
+          role="tabpanel" aria-labelledby="tab-kursy">
+          <p class="tab-note">
+            <i class="fa-solid fa-circle-info"></i>
+            Grupy 4–8 osób, zgodne z wymaganiami CKE. Przygotowanie do matury podstawowej i rozszerzonej.
+          </p>
+          <div class="price-table-wrap">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Kurs</th>
+                  <th>Cena miesięczna</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Matura podstawowa</td>
+                  <td class="price-cell">429 zł/msc</td>
+                </tr>
+                <tr>
+                  <td>Matura rozszerzona</td>
+                  <td class="price-cell">439 zł/msc</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="assets/docs/regulamin-kursy.pdf" target="_blank" rel="noopener" class="pdf-link">
+            <i class="fa-solid fa-file-pdf"></i>
+            Regulamin kursów maturalnych
+          </a>
+        </div>
+
+        </div><!-- /.tabs-content -->
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ O NAS ════════════════════════════════════ -->
+    <section id="o-nas" class="section section-alt">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-tag reveal">O nas</p>
+          <h2 class="section-title reveal">Poznaj nasz zespół.</h2>
+          <p class="section-lead reveal">Czworo ludzi, którzy naprawdę lubią matematykę. Wiemy — brzmi podejrzanie. Dlatego mamy 200+ uczniów, którzy to potwierdzają.</p>
+        </header>
+
+        <div class="team-grid">
+
+          <div class="team-card reveal">
+            <div class="team-photo-wrap">
+              <img src="assets/images/agnieszka.jpg" alt="Agnieszka Kopeć" class="team-photo" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3>Agnieszka</h3>
+              <p class="team-role">Współzałożycielka</p>
+              <button class="team-toggle" aria-expanded="false">
+                Poznaj mnie <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="team-bio">
+              <p>Absolwentka Matematyki Finansowej na Uniwersytecie Jagiellońskim. Założycielka Centrum Edukacji MATHrix. Swoją przygodę z nauczaniem rozpoczęła ponad 8 lat temu. Uwielbiana przez uczniów za atmosferę i metody nauczania, które trafiają nawet do najbardziej zagorzałych przeciwników matematyki. Specjalistka w przygotowywaniu do matury rozszerzonej i pomocy studentom. W wolnym czasie gra w siatkówkę i poznaje zakątki Krakowa.</p>
+            </div>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-photo-wrap">
+              <img src="assets/images/mateusz.jpg" alt="Mateusz Kopeć" class="team-photo" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3>Mateusz</h3>
+              <p class="team-role">Współzałożyciel</p>
+              <button class="team-toggle" aria-expanded="false">
+                Poznaj mnie <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="team-bio">
+              <p>Absolwent Matematyki Finansowej na Uniwersytecie Jagiellońskim i współwłaściciel Centrum Edukacji MATHrix. Korepetycji udziela od 8 lat – przez ten czas pomógł wielu uczniom na wszystkich poziomach edukacji. Specjalizuje się w prowadzeniu zajęć przygotowujących do matury i matematyce wyższej. Jego największymi pasjami są lotnictwo i modelarstwo redukcyjne.</p>
+            </div>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-photo-wrap">
+              <img src="assets/images/paulina.jpg" alt="Paulina" class="team-photo" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3>Paulina</h3>
+              <p class="team-role">Korepetytor</p>
+              <button class="team-toggle" aria-expanded="false">
+                Poznaj mnie <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="team-bio">
+              <p>Studentka Architektury w języku angielskim na Politechnice Krakowskiej. Matematyki uczy już 3 lata – ma niesamowite podejście do młodszych uczniów, dlatego zajmuje się prowadzeniem zajęć dla szkoły podstawowej. Kreatywna i pozytywna, za co dzieciaki ją uwielbiają. W wolnym czasie spełnia się w tańcu towarzyskim.</p>
+            </div>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-photo-wrap">
+              <img src="assets/images/milena.jpg" alt="Milena" class="team-photo" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3>Milena</h3>
+              <p class="team-role">Korepetytor</p>
+              <button class="team-toggle" aria-expanded="false">
+                Poznaj mnie <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="team-bio">
+              <p>Studentka fizyki studiów drugiego stopnia na Uniwersytecie Jagiellońskim. Korepetycji z matematyki i fizyki udziela od początku liceum. Dzięki kreatywności i wiedzy potrafi przedstawić trudne tematy w prosty i przyjazny sposób. W wolnym czasie zajmuje się grafiką komputerową i sztuczną inteligencją.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ OPINIE ═══════════════════════════════════ -->
+    <section id="opinie" class="section">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-tag reveal">Opinie</p>
+          <h2 class="section-title reveal">Co mówią uczniowie?</h2>
+          <p class="section-lead reveal">Wszystkie ocenione 5/5 gwiazdek. Sprawdź, co mówią o nas rodzice i uczniowie.</p>
+        </header>
+
+        <div class="reviews-grid" id="reviews-grid">
+
+          <div class="review-card reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Jestem bardzo zadowolona z lekcji indywidualnych jak i kursu przygotowującego do matury. Fachowe przygotowanie w przemiłej atmosferze! Zawsze 200% zaangażowania, indywidualne podejście do każdego. Matura z matematyki była tylko przyjemnością!"</p>
+            <div class="review-author">Magda</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Polecam z całego serca! Na lekcje zaczęłam uczęszczać kilka miesięcy przed maturą. Byłam wręcz zrozpaczona moją wiedzą. Dzięki pani Agnieszcze nie tylko zrozumiałam matematykę, ale uwierzyłam, że mogę zdać z całkiem niezłym wynikiem."</p>
+            <div class="review-author">Julia W.</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Serdecznie polecam współpracę z Panem Mateuszem. Bardzo bogaty zasób wiedzy, szeroka znajomość tematów. Zagadnienia, które dla mnie jako programisty były abstrakcyjne, nie stanowiły żadnego wyzwania!"</p>
+            <div class="review-author">Łukasz</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Z ręką na sercu polecam zaangażowaną i sympatyczną Panią Agnieszkę! Okazało się, że matematyki można uczyć się w przemiłej atmosferze. Wynik z matury rozszerzonej wybił daleko poza skalę oczekiwań!"</p>
+            <div class="review-author">Paulina</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Przerobiłem wielu korepetytorów, ale tylko jeden sprawił, że zrozumiałem podstawy matematyki do matury – był to Pan Mateusz z MATHrixa. Rozwiązywanie zadań zaczęło mi sprawiać przyjemność."</p>
+            <div class="review-author">Szymon</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Świetne warunki, możliwość lekcji zdalnych, nauczyciele z pasją i poświęceniem, autorskie próbne matury, miła atmosfera – jak najbardziej polecam wszystkim."</p>
+            <div class="review-author">Blanka</div>
+          </div>
+
+          <div class="review-card review-extra reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Pani Agnieszka indywidualnie podchodzi do każdego ucznia, wszystko tłumaczy na spokojnie bez stresu. Brałam korepetycje przez ok. 4 lata, pomogła mi niesamowicie. Dzięki jej pomocy zdałam maturę za pierwszym razem. Polecam w 100%!"</p>
+            <div class="review-author">Patrycja</div>
+          </div>
+
+          <div class="review-card review-extra reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Z pełną świadomością polecam Centrum Edukacji MATHrix, a w szczególności Pana Mateusza. Syn uczęszczał na lekcje bardzo chętnie, został świetnie przygotowany. Zawsze mógł skorzystać z pomocy dodatkowej online."</p>
+            <div class="review-author">Marcel</div>
+          </div>
+
+          <div class="review-card review-extra reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Chodziłam do MATHrixa na kurs przygotowujący do matury rozszerzonej oraz lekcje indywidualne. Nie dość, że polubiłam matematykę, to zrobiłam duży progres. Jedyne, czego żałuję, to że nie znalazłam się tam wcześniej!"</p>
+            <div class="review-author">Julia B.</div>
+          </div>
+
+          <div class="review-card review-extra reveal">
+            <div class="review-stars" aria-label="5 gwiazdek">★★★★★</div>
+            <p class="review-text">„Lekcje pomogły w opanowaniu całego materiału licealnego na poziomie rozszerzonym. Genialna atmosfera, młodzieżowe podejście oraz klarowny przekaz najtrudniejszych zagadnień. Po dwóch latach zajęć jestem zachwycony. Bardzo polecam!"</p>
+            <div class="review-author">Artur</div>
+          </div>
+
+        </div>
+
+        <div class="reviews-more reveal">
+          <button class="btn btn-ghost" id="reviews-toggle" aria-expanded="false">
+            <span>Pokaż wszystkie opinie</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ KONTAKT ══════════════════════════════════ -->
+    <section id="kontakt" class="section section-alt">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-tag reveal">Kontakt</p>
+          <h2 class="section-title reveal">Masz pytanie? Zadzwoń.</h2>
+          <p class="section-lead reveal">Bez presji, bez pakietów na siłę — po prostu porozmawiamy i razem dobierzemy najlepszą formę zajęć.</p>
+        </header>
+
+        <div class="kontakt-layout">
+
+          <div class="kontakt-info reveal">
+
+            <div class="kontakt-item">
+              <div class="kontakt-icon"><i class="fa-solid fa-building"></i></div>
+              <div>
+                <div class="kontakt-name">Centrum Edukacji MATHrix</div>
+                <div class="kontakt-line">
+                  Kotlarska 10/10
+                  <button class="copy-btn" data-copy="Kotlarska 10/10" aria-label="Kopiuj adres">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+                <div class="kontakt-sub">31-539 Kraków</div>
+              </div>
+            </div>
+
+            <div class="kontakt-item">
+              <div class="kontakt-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <div class="kontakt-name">Telefon</div>
+                <div class="kontakt-line">
+                  <a href="tel:+48577859242">577 859 242</a>
+                  <button class="copy-btn" data-copy="577859242" aria-label="Kopiuj numer">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+                <div class="kontakt-line">
+                  <a href="tel:+48732733048">732 733 048</a>
+                  <button class="copy-btn" data-copy="732733048" aria-label="Kopiuj numer">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="kontakt-item">
+              <div class="kontakt-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <div class="kontakt-name">E-mail</div>
+                <div class="kontakt-line">
+                  <a href="mailto:mathrix.krakow@gmail.com">mathrix.krakow@gmail.com</a>
+                  <button class="copy-btn" data-copy="mathrix.krakow@gmail.com" aria-label="Kopiuj e-mail">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="kontakt-item">
+              <div class="kontakt-icon"><i class="fa-brands fa-facebook"></i></div>
+              <div>
+                <div class="kontakt-name">Facebook</div>
+                <div class="kontakt-line">
+                  <a href="https://www.facebook.com/Centrum.Edukacji.MATHrix"
+                     target="_blank" rel="noopener">Centrum Edukacji MATHrix</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="kontakt-map reveal">
+            <img src="assets/images/mapka.jpg"
+                 alt="Mapa – Centrum Edukacji MATHrix, Kotlarska 10/10, Kraków"
+                 class="map-img" loading="lazy">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <img src="assets/images/logo-white.png" alt="MATHrix" class="footer-logo">
+          <p class="footer-name">Centrum Edukacji MATHrix</p>
+        </div>
+
+        <div class="footer-col">
+          <p>Kotlarska 10/10<br>31-539 Kraków</p>
+          <p>577 859 242 &nbsp;·&nbsp; 732 733 048</p>
+          <p>mathrix.krakow@gmail.com</p>
+        </div>
+
+        <div class="footer-col footer-social-col">
+          <a href="https://www.facebook.com/Centrum.Edukacji.MATHrix"
+             target="_blank" rel="noopener"
+             class="footer-social" aria-label="MATHrix na Facebooku">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="footer-year"></span> Centrum Edukacji MATHrix. Wszelkie prawa zastrzeżone.</p>
+        <a href="index.html" class="footer-v-link">← Wersja 1</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/v2.js"></script>
 </body>
 </html>
