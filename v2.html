@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATHrix v2 – Centrum Edukacji Matematycznej w Krakowie</title>
+  <meta name="description" content="Centrum Edukacji MATHrix w Krakowie – korepetycje z matematyki indywidualne i grupowe, kursy maturalne.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══════════════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">
+        <img src="assets/images/logo.png" alt="MATHrix" height="38">
+      </a>
+
+      <!-- DEV: version switcher (usunąć przed produkcją) -->
+      <div class="dev-versions">
+        <a href="index.html" class="dev-versions__btn">v1</a>
+        <a href="v2.html"    class="dev-versions__btn active">v2</a>
+      </div>
+      <!-- DEV: theme switcher (usunąć przed produkcją) -->
+      <div class="dev-themes" aria-label="Podgląd motywu">
+        <span class="dev-themes__label">Motyw:</span>
+        <button class="dev-themes__btn active" data-theme="default"
+                title="Różowo-fioletowy"
+                style="background:linear-gradient(135deg,#d42ab8,#7432cb)"></button>
+        <button class="dev-themes__btn" data-theme="granat-zloto"
+                title="Granat + złoto"
+                style="background:linear-gradient(135deg,#0f2d5a,#c9830a)"></button>
+        <button class="dev-themes__btn" data-theme="indygo"
+                title="Ciemny indygo + niebieski"
+                style="background:linear-gradient(135deg,#1e1b4b,#4f46e5)"></button>
+        <button class="dev-themes__btn" data-theme="zielen-zloto"
+                title="Głęboka zieleń + złoto"
+                style="background:linear-gradient(135deg,#0d3b2e,#d4a017)"></button>
+        <button class="dev-themes__btn" data-theme="antracyt-niebieski"
+                title="Antracyt + niebieski"
+                style="background:linear-gradient(135deg,#1e2d3d,#2563eb)"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <img src="assets/images/logo-white.png" alt="MATHrix" class="hero__logo">
+        <h1 class="hero__title">Hello World v2</h1>
+        <p class="hero__subtitle">Tu powstanie druga wersja strony MATHrix.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
