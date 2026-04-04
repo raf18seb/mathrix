@@ -1,0 +1,12 @@
+# Claude Code internal files
+.claude/
+
+# Editor
+.vscode/
+
+# Old assets (migrated to assets/)
+/images/
+
+# OS
+.DS_Store
+Thumbs.db
