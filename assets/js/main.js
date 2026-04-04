@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeSwitcher();
+  initCopyBtns();
   initHeader();
   initNav();
   initTeam();
@@ -10,6 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initFooterYear();
 });
+
+// ── Copy to clipboard ─────────────────────────────────────
+function initCopyBtns() {
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(btn.dataset.copy).then(() => {
+        const icon = btn.querySelector('i');
+        icon.className = 'fa-solid fa-check';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          icon.className = 'fa-regular fa-copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    });
+  });
+}
 
 // ── DEV: Theme switcher (usunąć przed produkcją) ─────────
 function initThemeSwitcher() {

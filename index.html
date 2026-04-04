@@ -32,12 +32,17 @@
       </a>
       <nav class="nav" id="nav" aria-label="Menu główne">
         <ul class="nav__list">
-          <li><a href="#dlaczego" class="nav__link">Dlaczego my?</a></li>
-          <li><a href="#kursy"   class="nav__link">Kursy</a></li>
-          <li><a href="#cennik"  class="nav__link">Cennik</a></li>
-          <li><a href="#zespol"  class="nav__link">O nas</a></li>
-          <li><a href="#opinie"  class="nav__link">Opinie</a></li>
-          <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+          <li><a href="#dlaczego" class="nav__link"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Dlaczego my?</a></li>
+          <li><a href="#kursy"   class="nav__link"><i class="fa-solid fa-book-open"      aria-hidden="true"></i> Kursy</a></li>
+          <li><a href="#cennik"  class="nav__link"><i class="fa-solid fa-tag"            aria-hidden="true"></i> Cennik</a></li>
+          <li><a href="#zespol"  class="nav__link"><i class="fa-solid fa-users"          aria-hidden="true"></i> O nas</a></li>
+          <li><a href="#opinie"  class="nav__link"><i class="fa-solid fa-star"           aria-hidden="true"></i> Opinie</a></li>
+          <li><a href="#kontakt" class="nav__link"><i class="fa-solid fa-location-dot"   aria-hidden="true"></i> Kontakt</a></li>
+          <li class="nav__item--cta">
+            <a href="tel:+48577859242" class="nav__link nav__link--phone">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> 577 859 242
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- DEV: theme switcher (usunąć przed produkcją) -->
@@ -80,11 +85,10 @@
             <span class="hero__btn-mobile">Zadzwoń teraz</span>
             <span class="hero__btn-desktop">577 859 242</span>
           </a>
-          <a href="#dlaczego" class="hero__link">Dowiedz się więcej</a>
+          <a href="#dlaczego" class="hero__link">
+            Dowiedz się więcej <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </a>
         </div>
-        <a href="#dlaczego" class="hero__arrow" aria-label="Przejdź dalej">
-          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-        </a>
       </div>
     </section>
 
@@ -122,15 +126,15 @@
               <i class="fa-solid fa-graduation-cap"></i>
             </div>
             <h3>Absolwenci UJ</h3>
-            <p>Agnieszka i Mateusz ukończyli Matematykę Finansową na Uniwersytecie Jagiellońskim. Wiedzą, jak wytłumaczyć każde zagadnienie – od szkoły podstawowej po studia wyższe.</p>
+            <p>Agnieszka i Mateusz – absolwenci Matematyki Finansowej UJ. Tłumaczymy wszystko jasno, od podstawówki po studia.</p>
           </div>
 
           <div class="dlaczego__card">
             <div class="dlaczego__icon" aria-hidden="true">
               <i class="fa-solid fa-location-dot"></i>
             </div>
-            <h3>Centrum Krakowa + Online</h3>
-            <p>Uczymy w nowoczesnych salach przy <strong>Rondzie Grzegórzeckim</strong> (Kotlarska 10/10) oraz w pełni wyposażone online – tablica wirtualna, tablety graficzne, materiały w PDF.</p>
+            <h3>Kraków + Online</h3>
+            <p>Nowoczesne sale przy Rondzie Grzegórzeckim oraz pełne zajęcia online – tablica wirtualna, tablet graficzny, materiały PDF.</p>
           </div>
 
           <div class="dlaczego__card">
@@ -138,7 +142,7 @@
               <i class="fa-solid fa-heart"></i>
             </div>
             <h3>Bezstresowa atmosfera</h3>
-            <p>U nas nie ma przymusowego wyciągania do tablicy. Twój komfort jest priorytetem – nauka matematyki staje się przyjemnością, a nie drogą przez mękę.</p>
+            <p>Nikt nie jest wyciągany do tablicy. Twój komfort jest priorytetem – matematyka staje się przyjemnością.</p>
           </div>
 
           <div class="dlaczego__card">
@@ -146,7 +150,7 @@
               <i class="fa-solid fa-chart-line"></i>
             </div>
             <h3>Sprawdzone wyniki</h3>
-            <p>Średni wynik kursantów na maturze podstawowej to <strong>90%</strong>. Praktycznie każdy zaangażowany uczeń rozszerzonej trafia do najlepszych <strong>10% w Polsce</strong>.</p>
+            <p>Średni wynik kursantów: <strong>90%</strong> na maturze podstawowej. Rozszerzona: regularnie <strong>top 10% w Polsce</strong>.</p>
           </div>
 
         </div>
@@ -166,11 +170,11 @@
           <ul class="kursy__list">
             <li>
               <span class="kursy__bullet" aria-hidden="true"><i class="fa-solid fa-bolt"></i></span>
-              <div><strong>100% zaangażowania</strong> – kursy prowadzą Agnieszka i Mateusz Kopeć – absolwenci Matematyki na UJ z ogromną pasją do nauczania i świetnym kontaktem z uczniami.</div>
+              <div><strong>100% zaangażowania</strong> – kursy prowadzą Agnieszka i Mateusz Kopeć – absolwenci Matematyki UJ z pasją do nauczania.</div>
             </li>
             <li>
               <span class="kursy__bullet" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
-              <div><strong>Naukę bez stresu</strong> – u nas nie ma przymusowego wyciągania do tablicy. Twój komfort jest priorytetem. Zadania rozwiązuje prowadzący z dokładnym tłumaczeniem, a Ty dostajesz gotowe notatki w PDF.</div>
+              <div><strong>Nauka bez stresu</strong> – nikt nie jest wyciągany do tablicy. Dokładne tłumaczenia i gotowe notatki PDF po każdych zajęciach.</div>
             </li>
             <li>
               <span class="kursy__bullet" aria-hidden="true"><i class="fa-solid fa-laptop"></i></span>
@@ -244,9 +248,9 @@
         <!-- Panel 1 – indywidualne -->
         <div class="tab-panel active" id="tab-panel-1" role="tabpanel" aria-labelledby="tab-btn-1">
           <p class="tab-note">
-            <strong>Pakiet 8 lekcji</strong> – dla uczniów realizujących przynajmniej 2 lekcje tygodniowo.<br>
-            <strong>Pakiet 4 lekcji</strong> – dla uczniów realizujących 1 lekcję tygodniowo.<br>
-            Okres na wykorzystanie pakietu wynosi 30 dni. Szczegóły w regulaminie poniżej.
+            <strong>Pakiet 8 lekcji</strong> – min. 2 lekcje / tydzień &nbsp;·&nbsp;
+            <strong>Pakiet 4 lekcji</strong> – 1 lekcja / tydzień &nbsp;·&nbsp;
+            Ważność pakietu: 30 dni.
           </p>
           <div class="price-table-wrap">
             <table class="price-table">
@@ -280,10 +284,7 @@
 
         <!-- Panel 2 – grupowe -->
         <div class="tab-panel" id="tab-panel-2" role="tabpanel" aria-labelledby="tab-btn-2" hidden>
-          <p class="tab-note">
-            Zajęcia grupowe przeznaczone są dla grupy uczniów przerabiających ten sam materiał.
-            Spotkania odbywają się w naszym lokalu lub online. Grupa może liczyć od 2 do 8 uczniów.
-          </p>
+          <p class="tab-note">Grupy 2–8 uczniów w tym samym materiale. Zajęcia stacjonarnie lub online.</p>
           <div class="price-table-wrap">
             <table class="price-table">
               <thead>
@@ -311,10 +312,7 @@
 
         <!-- Panel 3 – kursy -->
         <div class="tab-panel" id="tab-panel-3" role="tabpanel" aria-labelledby="tab-btn-3" hidden>
-          <p class="tab-note">
-            Nasze kursy to zajęcia w grupach od 4 do 8 osób, przygotowujące do matury. Opracowane
-            w oparciu o wieloletnie doświadczenie, w pełni zgodne z aktualnymi wymaganiami CKE.
-          </p>
+          <p class="tab-note">Grupy 4–8 osób, zgodne z wymaganiami CKE. Przygotowanie do matury podstawowej i rozszerzonej.</p>
           <div class="price-table-wrap">
             <table class="price-table">
               <thead>
@@ -340,7 +338,6 @@
         <!-- Regulamin -->
         <div class="regulamin reveal">
           <h3 class="regulamin__title">Regulamin</h3>
-          <p class="regulamin__desc">Zachęcamy do zapoznania się z regulaminem – znajdziesz w nim odpowiedzi na wiele pytań.</p>
           <div class="regulamin__links">
             <a href="assets/docs/regulamin-indywidualne.pdf" target="_blank" rel="noopener" class="regulamin__btn">
               <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Korepetycje indywidualne
@@ -352,7 +349,6 @@
               <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Kursy
             </a>
           </div>
-          <p class="regulamin__contact">W przypadku dodatkowych pytań zapraszamy do kontaktu.</p>
         </div>
 
       </div>
@@ -362,12 +358,7 @@
     <section class="section zespol" id="zespol">
       <div class="container">
         <h2 class="section__title reveal">O nas</h2>
-        <p class="section__lead reveal">
-          Jesteśmy zespołem ambitnych i doświadczonych osób, dla których nauczanie matematyki to
-          idealne połączenie pasji i pracy. Wierzymy, że do osiągnięcia zamierzonego celu niezbędny
-          jest bardzo dobry kontakt z uczniem – dlatego dbamy o wesołą i bezstresową atmosferę,
-          dzięki której nauka matematyki przestaje być karą.
-        </p>
+        <p class="section__lead reveal">Nauczanie matematyki to dla nas pasja, nie tylko praca. Poznaj zespół, który sprawi, że matematyka przestanie być Twoją zmorą.</p>
 
         <div class="team">
           <div class="team__grid reveal">
@@ -580,21 +571,38 @@
           <div class="kontakt__info reveal">
             <h3 class="kontakt__name">Centrum Edukacji MATHrix</h3>
             <ul class="kontakt__list">
-              <li>
+              <li class="kontakt__list-addr">
                 <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <address>Kotlarska 10/10, 31-539 Kraków</address>
+                <div class="kontakt__address">
+                  <span class="kontakt__street">
+                    <address>Kotlarska 10/10</address>
+                    <button class="copy-btn" data-copy="Kotlarska 10/10" title="Kopiuj ulicę" aria-label="Kopiuj ulicę">
+                      <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                    </button>
+                  </span>
+                  <span class="kontakt__city">31-539 Kraków</span>
+                </div>
               </li>
               <li>
                 <i class="fa-solid fa-phone" aria-hidden="true"></i>
                 <a href="tel:+48577859242">577 859 242</a>
+                <button class="copy-btn" data-copy="577859242" title="Kopiuj numer" aria-label="Kopiuj numer">
+                  <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                </button>
               </li>
               <li>
                 <i class="fa-solid fa-phone" aria-hidden="true"></i>
                 <a href="tel:+48732733048">732 733 048</a>
+                <button class="copy-btn" data-copy="732733048" title="Kopiuj numer" aria-label="Kopiuj numer">
+                  <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                </button>
               </li>
               <li>
                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 <a href="mailto:mathrix.krakow@gmail.com">mathrix.krakow@gmail.com</a>
+                <button class="copy-btn" data-copy="mathrix.krakow@gmail.com" title="Kopiuj e-mail" aria-label="Kopiuj e-mail">
+                  <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                </button>
               </li>
               <li>
                 <i class="fa-brands fa-facebook" aria-hidden="true"></i>
@@ -625,7 +633,7 @@
       </div>
       <div class="footer__details">
         <p class="footer__company">Centrum Edukacji MATHrix</p>
-        <address class="footer__address">Kotlarska 10/10, 31-539 Kraków</address>
+        <address class="footer__address">Kotlarska 10/10<br>31-539 Kraków</address>
       </div>
       <div class="footer__contact">
         <a href="tel:+48577859242" class="footer__link">
