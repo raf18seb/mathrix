@@ -134,12 +134,28 @@
   --pdf-color:     #dc2626;
 }
 
-/* Logo: zawsze logo.png, na ciemnych motywach białe przez filter */
-.logo-dark { display: none; }
+/* Logo SVG: ikona + wordmark HTML */
+.logo-icon {
+  height: 32px;
+  width: auto;
+  flex-shrink: 0;
+}
 
-[data-theme="dark-premium"] .logo-light,
-[data-theme="dark-matrix"]  .logo-light {
-  filter: brightness(0) invert(1);
+.logo-wordmark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.logo-rix {
+  font-weight: 500;
 }
 
 /* Dark matrix: subtle grid background on hero */
@@ -150,7 +166,35 @@
 }
 
 
-/* Hero decorative symbol — outline only, theme-aware */
+/* Hero: dwukolumnowy układ */
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.hero-content {
+  max-width: 560px;
+  flex: 1;
+}
+
+.hero-visual {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.hero-visual-icon {
+  width: clamp(120px, 14vw, 200px);
+  height: auto;
+  opacity: 0.28;
+  filter: drop-shadow(0 0 24px var(--glow));
+  transition: opacity 0.35s, filter 0.35s;
+}
+
+/* Znak sumy — dekoracja u dołu */
 .hero::after {
   content: '∑';
   position: absolute;
@@ -168,6 +212,10 @@
   user-select: none;
   z-index: 0;
   transition: -webkit-text-stroke-color 0.35s;
+}
+
+@media (max-width: 900px) {
+  .hero-visual { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -407,14 +455,9 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
   flex-shrink: 0;
   display: flex;
   align-items: center;
+  gap: 9px;
+  text-decoration: none;
 }
-
-.logo-img {
-  height: 36px;
-  width: auto;
-}
-
-.logo-dark { display: none; }
 
 .nav-links {
   display: flex;
@@ -579,10 +622,6 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
 }
 
 .hero .container { position: relative; z-index: 1; }
-
-.hero-content {
-  max-width: 700px;
-}
 
 .hero-badge {
   display: inline-flex;
@@ -1217,7 +1256,16 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
 .reviews-more {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
+
+.reviews-google-btn {
+  gap: 8px;
+}
+
+.reviews-google-btn i { color: var(--accent); }
 
 #reviews-toggle i {
   transition: transform 0.3s ease;
@@ -1645,6 +1693,9 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
   .container { padding: 0 20px; }
   .nav-container { padding: 0 20px; }
   .stats-grid { padding: 0 20px; }
+
+  /* Na bardzo wąskich ekranach chowamy wordmark, zostaje sama ikonka */
+  .logo-wordmark { display: none; }
 
   .hero { padding: 100px 0 60px; }
 

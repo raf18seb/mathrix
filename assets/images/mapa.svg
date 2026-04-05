@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-label="Mapa okolicy Ronda Grzegórzeckiego, Kraków — lokalizacja Centrum Edukacji MATHrix">
+  <defs>
+    <linearGradient id="pinGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d42ab8"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="780" height="420" fill="#0d0d1a"/>
+
+  <!-- City blocks / buildings (subtle) -->
+  <rect x="20"  y="20"  width="90"  height="60"  rx="3" fill="#111128"/>
+  <rect x="120" y="20"  width="60"  height="40"  rx="3" fill="#111128"/>
+  <rect x="20"  y="95"  width="55"  height="70"  rx="3" fill="#111128"/>
+  <rect x="85"  y="95"  width="75"  height="50"  rx="3" fill="#111128"/>
+  <rect x="20"  y="180" width="110" height="55"  rx="3" fill="#111128"/>
+  <rect x="20"  y="250" width="70"  height="80"  rx="3" fill="#111128"/>
+  <rect x="100" y="260" width="55"  height="55"  rx="3" fill="#111128"/>
+  <rect x="20"  y="345" width="100" height="55"  rx="3" fill="#111128"/>
+  <rect x="130" y="355" width="60"  height="45"  rx="3" fill="#111128"/>
+
+  <rect x="650" y="20"  width="110" height="70"  rx="3" fill="#111128"/>
+  <rect x="590" y="20"  width="50"  height="45"  rx="3" fill="#111128"/>
+  <rect x="650" y="105" width="80"  height="60"  rx="3" fill="#111128"/>
+  <rect x="650" y="180" width="110" height="55"  rx="3" fill="#111128"/>
+  <rect x="640" y="250" width="120" height="80"  rx="3" fill="#111128"/>
+  <rect x="640" y="345" width="120" height="55"  rx="3" fill="#111128"/>
+  <rect x="590" y="355" width="42"  height="45"  rx="3" fill="#111128"/>
+
+  <rect x="340" y="20"  width="100" height="55"  rx="3" fill="#111128"/>
+  <rect x="450" y="20"  width="90"  height="50"  rx="3" fill="#111128"/>
+  <rect x="250" y="20"  width="80"  height="45"  rx="3" fill="#111128"/>
+
+  <rect x="350" y="340" width="80"  height="60"  rx="3" fill="#111128"/>
+  <rect x="440" y="350" width="70"  height="50"  rx="3" fill="#111128"/>
+  <rect x="280" y="345" width="60"  height="55"  rx="3" fill="#111128"/>
+  <rect x="210" y="340" width="60"  height="60"  rx="3" fill="#111128"/>
+
+  <!-- ═══ ROADS ═══ -->
+  <!-- II obwodnica (vertical, right side) -->
+  <rect x="610" y="0" width="28" height="420" fill="#1a1a3a"/>
+  <!-- al. Pokoju (horizontal, upper) -->
+  <rect x="0" y="70" width="780" height="26" fill="#1a1a3a"/>
+  <!-- Grzegórzecka (diagonal, from upper-left to roundabout) -->
+  <line x1="0" y1="220" x2="310" y2="200" stroke="#1a1a3a" stroke-width="24" stroke-linecap="round"/>
+  <!-- Grzegórzecka continuation (from roundabout down-right) -->
+  <line x1="470" y1="220" x2="612" y2="260" stroke="#1a1a3a" stroke-width="24" stroke-linecap="round"/>
+  <!-- Kotlarska (going down from roundabout area to MATHrix) -->
+  <line x1="390" y1="230" x2="360" y2="420" stroke="#1a1a3a" stroke-width="20" stroke-linecap="round"/>
+  <!-- Rzeźnicza (going up-left from roundabout) -->
+  <line x1="310" y1="200" x2="160" y2="130" stroke="#1a1a3a" stroke-width="18" stroke-linecap="round"/>
+  <!-- Semperitowców (going down-left) -->
+  <line x1="310" y1="215" x2="140" y2="360" stroke="#1a1a3a" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Road center lines (subtle) -->
+  <line x1="0" y1="83" x2="780" y2="83" stroke="#252545" stroke-width="1" stroke-dasharray="20,14"/>
+  <line x1="624" y1="0" x2="624" y2="420" stroke="#252545" stroke-width="1" stroke-dasharray="20,14"/>
+
+  <!-- ═══ ROUNDABOUT ═══ -->
+  <circle cx="390" cy="210" r="58" fill="#1a1a3a"/>
+  <circle cx="390" cy="210" r="42" fill="#0d0d1a"/>
+  <circle cx="390" cy="210" r="35" fill="#111128"/>
+  <!-- Roundabout inner ring accent -->
+  <circle cx="390" cy="210" r="42" fill="none" stroke="#252545" stroke-width="1"/>
+  <circle cx="390" cy="210" r="58" fill="none" stroke="#252545" stroke-width="1"/>
+
+  <!-- ═══ STREET LABELS ═══ -->
+  <text font-family="'Inter', sans-serif" font-size="11" fill="#4a4a7a" font-weight="500">
+    <textPath href="#road-pokoju">al. Pokoju</textPath>
+  </text>
+  <!-- Use simple positioned text instead of textPath for simplicity -->
+  <text x="50"  y="67"  font-family="'Inter',sans-serif" font-size="11" fill="#4a4a7a" font-weight="500" transform="rotate(0)">al. Pokoju</text>
+  <text x="500" y="67"  font-family="'Inter',sans-serif" font-size="11" fill="#4a4a7a" font-weight="500">al. Pokoju</text>
+  <text x="620" y="150" font-family="'Inter',sans-serif" font-size="11" fill="#4a4a7a" font-weight="500">II obwodnica</text>
+  <text x="175" y="170" font-family="'Inter',sans-serif" font-size="11" fill="#4a4a7a" font-weight="500" transform="rotate(-8,175,170)">Grzegórzecka</text>
+  <text x="480" y="248" font-family="'Inter',sans-serif" font-size="11" fill="#4a4a7a" font-weight="500" transform="rotate(10,480,248)">Grzegórzecka</text>
+  <text x="100" y="145" font-family="'Inter',sans-serif" font-size="10" fill="#4a4a7a" font-weight="500" transform="rotate(-30,100,145)">Rzeźnicza</text>
+  <text x="105" y="300" font-family="'Inter',sans-serif" font-size="10" fill="#4a4a7a" font-weight="500" transform="rotate(-45,105,300)">Semperitowców</text>
+  <text x="354" y="290" font-family="'Inter',sans-serif" font-size="11" fill="#4a4a7a" font-weight="500" transform="rotate(-6,354,290)">Kotlarska</text>
+
+  <!-- ═══ TRAM STOPS ═══ -->
+  <!-- Custom tram stop icon (inline, repeated) -->
+  <!-- Stop 1: on al. Pokoju, left -->
+  <g transform="translate(195,83)" filter="url(#shadow)">
+    <rect x="-14" y="-10" width="28" height="20" rx="4" fill="#1e1e40" stroke="#7c3aed" stroke-width="1.5"/>
+    <!-- Tram icon: simplified front view -->
+    <rect x="-7" y="-7" width="14" height="12" rx="2" fill="none" stroke="#a78bfa" stroke-width="1.2"/>
+    <rect x="-5" y="-6" width="4"  height="3"  rx="0.5" fill="#a78bfa" opacity="0.7"/>
+    <rect x="1"  y="-6" width="4"  height="3"  rx="0.5" fill="#a78bfa" opacity="0.7"/>
+    <line x1="-3" y1="2" x2="-3" y2="5" stroke="#a78bfa" stroke-width="1"/>
+    <line x1="3"  y1="2" x2="3"  y2="5" stroke="#a78bfa" stroke-width="1"/>
+  </g>
+  <text x="195" y="112" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="#7c6aad" font-weight="600">Rondo Grzegórzeckie</text>
+
+  <!-- Stop 2: on al. Pokoju, right -->
+  <g transform="translate(530,83)" filter="url(#shadow)">
+    <rect x="-14" y="-10" width="28" height="20" rx="4" fill="#1e1e40" stroke="#7c3aed" stroke-width="1.5"/>
+    <rect x="-7" y="-7" width="14" height="12" rx="2" fill="none" stroke="#a78bfa" stroke-width="1.2"/>
+    <rect x="-5" y="-6" width="4"  height="3"  rx="0.5" fill="#a78bfa" opacity="0.7"/>
+    <rect x="1"  y="-6" width="4"  height="3"  rx="0.5" fill="#a78bfa" opacity="0.7"/>
+    <line x1="-3" y1="2" x2="-3" y2="5" stroke="#a78bfa" stroke-width="1"/>
+    <line x1="3"  y1="2" x2="3"  y2="5" stroke="#a78bfa" stroke-width="1"/>
+  </g>
+  <text x="530" y="112" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="#7c6aad" font-weight="600">Rondo Grzegórzeckie</text>
+
+  <!-- Stop 3: on Grzegórzecka, lower-right -->
+  <g transform="translate(550,243)" filter="url(#shadow)">
+    <rect x="-14" y="-10" width="28" height="20" rx="4" fill="#1e1e40" stroke="#7c3aed" stroke-width="1.5"/>
+    <rect x="-7" y="-7" width="14" height="12" rx="2" fill="none" stroke="#a78bfa" stroke-width="1.2"/>
+    <rect x="-5" y="-6" width="4"  height="3"  rx="0.5" fill="#a78bfa" opacity="0.7"/>
+    <rect x="1"  y="-6" width="4"  height="3"  rx="0.5" fill="#a78bfa" opacity="0.7"/>
+    <line x1="-3" y1="2" x2="-3" y2="5" stroke="#a78bfa" stroke-width="1"/>
+    <line x1="3"  y1="2" x2="3"  y2="5" stroke="#a78bfa" stroke-width="1"/>
+  </g>
+  <text x="550" y="261" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="#7c6aad" font-weight="600">Grzegórzecka</text>
+
+  <!-- ═══ MATHrix PIN ═══ -->
+  <!-- Pin at Kotlarska 10/10 -->
+  <g transform="translate(370,355)" filter="url(#glow)">
+    <!-- Pin body -->
+    <path d="M0 -28 C-14 -28 -14 -8 0 0 C14 -8 14 -28 0 -28 Z" fill="url(#pinGrad)"/>
+    <!-- Pin circle -->
+    <circle cx="0" cy="-18" r="7" fill="white" opacity="0.95"/>
+    <!-- Gradient dot inside -->
+    <circle cx="0" cy="-18" r="3.5" fill="url(#pinGrad)"/>
+  </g>
+  <!-- Label -->
+  <rect x="255" y="363" width="185" height="38" rx="8" fill="#1e1e40" stroke="#7c3aed" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="347" y="378" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10" fill="#a78bfa" font-weight="700">Centrum Edukacji MATHrix</text>
+  <text x="347" y="393" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10" fill="#6464a0" font-weight="500">Kotlarska 10/10</text>
+
+  <!-- ═══ BORDER ═══ -->
+  <rect width="780" height="420" fill="none" stroke="#1e1e3a" stroke-width="1" rx="16"/>
+</svg>

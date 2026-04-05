@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MATHrix">
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="5" y1="4" x2="59" y2="58">
+      <stop offset="0%" stop-color="#d42ab8"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top board (diamond / mortarboard cap) -->
+  <path d="M32 4L59 22L32 40L5 22Z" fill="url(#g)"/>
+
+  <!-- Cross / matrix symbol on the board (white) -->
+  <rect x="29.5" y="10" width="5" height="24" rx="2.5" fill="white" fill-opacity="0.88"/>
+  <rect x="20"   y="19.5" width="24" height="5" rx="2.5" fill="white" fill-opacity="0.88"/>
+
+  <!-- Cap body -->
+  <rect x="21" y="39" width="22" height="15" rx="4" fill="url(#g)"/>
+
+  <!-- Tassel string -->
+  <path d="M59 22Q57 37 56 50" stroke="#b02fa0" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Tassel bob -->
+  <circle cx="56" cy="54" r="3.5" fill="url(#g)"/>
+</svg>
