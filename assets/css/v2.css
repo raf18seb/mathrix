@@ -493,6 +493,15 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
 
 .nav-link:hover::after { width: 100%; }
 
+/* Nav meta — wersje + gęstość w jednej kolumnie */
+.nav-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
 /* DEV: version switcher */
 .dev-versions {
   display: flex;
