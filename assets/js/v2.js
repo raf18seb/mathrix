@@ -7,7 +7,7 @@
 /* ─── Density switcher ───────────────────────────────────────────────────── */
 
 (function initDensity() {
-  const saved = localStorage.getItem('mathrix-density') || 'normal';
+  const saved = localStorage.getItem('mathrix-density') || 'compact';
   document.documentElement.setAttribute('data-density', saved);
 
   const btns = document.querySelectorAll('.density-btn');
