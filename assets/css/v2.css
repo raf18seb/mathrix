@@ -660,7 +660,7 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: 120px 0 80px;
+  padding: 80px 0 80px;
   position: relative;
   overflow: hidden;
 }
@@ -1888,7 +1888,7 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
 /* Dodatkowa redukcja odstępów — żeby więcej się mieściło na ekranie */
 [data-density="compact"] .section        { padding: 84px 0; }
 [data-density="compact"] .section-header { margin-bottom: 48px; }
-[data-density="compact"] .hero           { padding: 100px 0 64px; }
+[data-density="compact"] .hero           { padding: 72px 0 64px; }
 [data-density="compact"] .stats-strip    { padding: 44px 0; }
 
 [data-density="dense"] {
@@ -1896,5 +1896,5 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
 }
 [data-density="dense"] .section          { padding: 60px 0; }
 [data-density="dense"] .section-header   { margin-bottom: 32px; }
-[data-density="dense"] .hero             { padding: 72px 0 48px; min-height: unset; }
+[data-density="dense"] .hero             { padding: 56px 0 48px; min-height: unset; }
 [data-density="dense"] .stats-strip      { padding: 30px 0; }
