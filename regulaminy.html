@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark-premium">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regulaminy – MATHrix</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/v2.css">
+  <link rel="stylesheet" href="assets/css/legal.css">
+</head>
+<body>
+
+  <nav class="legal-nav">
+    <a href="v2.html" class="logo" aria-label="MATHrix – strona główna">
+      <img src="assets/images/logo-icon.svg" alt="" class="logo-icon" aria-hidden="true">
+      <span class="logo-wordmark" aria-hidden="true">MATH<span class="logo-rix">rix</span></span>
+    </a>
+    <a href="v2.html" class="legal-back">
+      <i class="fa-solid fa-arrow-left"></i> Wróć na stronę główną
+    </a>
+  </nav>
+
+  <main>
+    <div class="legal-wrap">
+
+      <div class="legal-hero">
+        <h1>Regulaminy</h1>
+        <p class="legal-date">Centrum Edukacji MATHrix · Kotlarska 10/10, Kraków</p>
+      </div>
+
+      <div class="regulaminy-list">
+
+        <a href="regulamin-indywidualne.html" class="regulamin-card">
+          <div class="regulamin-card-icon"><i class="fa-solid fa-user"></i></div>
+          <div class="regulamin-card-body">
+            <p class="regulamin-card-title">Korepetycje indywidualne</p>
+            <p class="regulamin-card-desc">Zasady, pakiety, odwoływanie zajęć, cennik.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right regulamin-card-arrow"></i>
+        </a>
+
+        <a href="regulamin-grupowe.html" class="regulamin-card">
+          <div class="regulamin-card-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="regulamin-card-body">
+            <p class="regulamin-card-title">Korepetycje grupowe</p>
+            <p class="regulamin-card-desc">Organizacja grupy, nieobecności, cennik.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right regulamin-card-arrow"></i>
+        </a>
+
+        <a href="regulamin-kursy.html" class="regulamin-card">
+          <div class="regulamin-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="regulamin-card-body">
+            <p class="regulamin-card-title">Kursy maturalne</p>
+            <p class="regulamin-card-desc">Terminy, opłaty miesięczne, rezygnacja, materiały.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right regulamin-card-arrow"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logo-icon.svg" alt="MATHrix" class="footer-logo">
+          <p class="footer-name">Centrum Edukacji MATHrix</p>
+        </div>
+        <div class="footer-col">
+          <p>Kotlarska 10/10<br>31-539 Kraków</p>
+          <p>577 859 242 &nbsp;·&nbsp; 732 733 048</p>
+          <p>mathrix.krakow@gmail.com</p>
+        </div>
+        <div class="footer-col footer-social-col">
+          <a href="https://www.facebook.com/Centrum.Edukacji.MATHrix" target="_blank" rel="noopener"
+             class="footer-social" aria-label="MATHrix na Facebooku">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <script>document.write(new Date().getFullYear())</script> Centrum Edukacji MATHrix &nbsp;·&nbsp; NIP: 6793167694 / 6793189164</p>
+        <a href="polityka-prywatnosci.html" class="footer-v-link">Polityka prywatności</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/cookies.js"></script>
+  <div id="cookie-banner" role="dialog" aria-label="Zgoda na pliki cookies" aria-live="polite">
+    <p class="cookie-banner-text">
+      <strong>Używamy plików cookies.</strong>
+      Strona korzysta z Google Analytics do analizy ruchu.
+      <a href="polityka-prywatnosci.html#cookies">Dowiedz się więcej</a>
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-decline" class="cookie-btn-decline">Tylko niezbędne</button>
+      <button id="cookie-accept"  class="cookie-btn-accept">Akceptuję</button>
+    </div>
+  </div>
+
+  <script>
+    const saved = localStorage.getItem('mathrix-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  </script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark-premium">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polityka prywatności – MATHrix</title>
+  <meta name="description" content="Polityka prywatności i pliki cookies Centrum Edukacji MATHrix. Dane rejestrowe firm.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/v2.css">
+  <link rel="stylesheet" href="assets/css/legal.css">
+
+  <style>
+    /* kept for one-off overrides */
+    body { padding-top: 72px; }
+
+    .legal-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 900;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      height: 72px;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      gap: 24px;
+    }
+
+    .legal-nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex: 1;
+    }
+
+    .legal-nav .logo-icon { height: 32px; width: 32px; }
+
+    .legal-nav .logo-wordmark {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .legal-nav .logo-rix { font-weight: 500; }
+
+    .legal-back {
+      font-size: 14px;
+      color: var(--text-2);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .legal-back:hover { color: var(--text); }
+
+    /* ── Content ── */
+    .legal-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 40px 96px;
+    }
+
+    .legal-hero {
+      margin-bottom: 56px;
+    }
+
+    .legal-hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .legal-hero .legal-date {
+      font-size: 14px;
+      color: var(--text-3);
+    }
+
+    .legal-section {
+      margin-bottom: 48px;
+    }
+
+    .legal-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .legal-section h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+
+    .legal-section p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-2);
+      margin-bottom: 12px;
+    }
+
+    .legal-section p:last-child { margin-bottom: 0; }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+    }
+
+    .legal-section ul li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-2);
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .legal-section ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── Company data table ── */
+    .dane-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .dane-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .dane-card-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .dane-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    .dane-row:last-child { margin-bottom: 0; }
+
+    .dane-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-3);
+      margin-bottom: 2px;
+    }
+
+    .dane-value {
+      font-size: 14px;
+      color: var(--text-2);
+      font-weight: 500;
+    }
+
+    /* ── Cookie types table ── */
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    .cookie-table th {
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-3);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cookie-table td {
+      padding: 12px 14px;
+      color: var(--text-2);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .cookie-table tr:last-child td { border-bottom: none; }
+
+    .cookie-table tr:nth-child(even) td {
+      background: var(--table-stripe);
+    }
+
+    .accent-link {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .accent-link:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: var(--badge-bg);
+      border: 1px solid rgba(124,58,237,0.2);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 640px) {
+      .legal-nav { padding: 0 20px; }
+      .legal-wrap { padding: 48px 20px 64px; }
+      .dane-grid  { grid-template-columns: 1fr; }
+      .cookie-table th:last-child,
+      .cookie-table td:last-child { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="legal-nav">
+    <a href="v2.html" class="logo" aria-label="MATHrix – strona główna">
+      <img src="assets/images/logo-icon.svg" alt="" class="logo-icon" aria-hidden="true">
+      <span class="logo-wordmark" aria-hidden="true">MATH<span class="logo-rix">rix</span></span>
+    </a>
+    <a href="v2.html" class="legal-back">
+      <i class="fa-solid fa-arrow-left"></i> Wróć na stronę główną
+    </a>
+  </nav>
+
+  <!-- ── CONTENT ── -->
+  <main>
+    <div class="legal-wrap">
+
+      <div class="legal-hero">
+        <h1>Polityka prywatności</h1>
+        <p class="legal-date">Ostatnia aktualizacja: 6 kwietnia 2025 r.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Kto odpowiada za Twoje dane?</h2>
+        <p>
+          Centrum Edukacji MATHrix prowadzone jest przez dwie osoby — Agnieszkę i Mateusza Kopeć.
+          Oboje są współadministratorami danych. We wszystkich sprawach piszcie na
+          <a href="mailto:mathrix.krakow@gmail.com" class="accent-link">mathrix.krakow@gmail.com</a>.
+        </p>
+        <div class="dane-grid">
+          <div class="dane-card">
+            <div class="dane-card-name">Agnieszka Kopeć<br>Centrum Edukacji MATHrix</div>
+            <div class="dane-row"><span class="dane-label">NIP</span><span class="dane-value">6793167694</span></div>
+            <div class="dane-row"><span class="dane-label">REGON</span><span class="dane-value">369856560</span></div>
+            <div class="dane-row"><span class="dane-label">Adres</span><span class="dane-value">ul. Kotlarska 10/10, 31-539 Kraków</span></div>
+          </div>
+          <div class="dane-card">
+            <div class="dane-card-name">Mateusz Kopeć<br>Centrum Edukacji MATHrix</div>
+            <div class="dane-row"><span class="dane-label">NIP</span><span class="dane-value">6793189164</span></div>
+            <div class="dane-row"><span class="dane-label">REGON</span><span class="dane-value">384259884</span></div>
+            <div class="dane-row"><span class="dane-label">Adres</span><span class="dane-value">ul. Kotlarska 10/10, 31-539 Kraków</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>Jakie dane mamy i skąd?</h2>
+        <p>
+          Jeśli piszesz do nas e-mail, kontaktujesz się przez Facebooka lub dzwonisz,
+          możemy mieć Twoje imię, e-mail lub numer telefonu — tylko po to, żeby odpowiedzieć
+          na Twoje pytanie lub prowadzić z Tobą zajęcia.
+        </p>
+        <p>
+          Strona korzysta z <strong>Google Analytics 4</strong> — zbiera zanonimizowane dane
+          o tym, jak jest używana (kraj, urządzenie, odwiedzone podstrony). Szczegóły
+          w sekcji o cookies poniżej.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Po co i jak długo?</h2>
+        <ul>
+          <li><strong>Kontakt</strong> — żeby odpowiedzieć na zapytanie. Przechowujemy do 3 lat od zakończenia sprawy.</li>
+          <li><strong>Prowadzenie zajęć</strong> — wykonanie umowy. Dane przez czas trwania umowy + 5 lat (przepisy podatkowe).</li>
+          <li><strong>Analityka</strong> — żeby wiedzieć, co na stronie działa. Google Analytics trzyma dane do 14 miesięcy.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>Twoje prawa</h2>
+        <p>
+          Możesz w dowolnym momencie poprosić nas o dostęp do swoich danych, ich poprawienie,
+          usunięcie lub ograniczenie przetwarzania. Możesz też wyrazić sprzeciw wobec analityki.
+          Napisz na <a href="mailto:mathrix.krakow@gmail.com" class="accent-link">mathrix.krakow@gmail.com</a>
+          — odpiszemy w ciągu 30 dni.
+        </p>
+        <p>
+          Jeśli uważasz, że coś poszło nie tak, możesz złożyć skargę do
+          <a href="https://uodo.gov.pl" class="accent-link" target="_blank" rel="noopener">UODO</a>
+          (ul. Stawki 2, Warszawa).
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Kto jeszcze widzi dane?</h2>
+        <p>
+          Nikomu nie sprzedajemy danych. Jedyny zewnętrzny odbiorca to Google (Analytics) —
+          dane wędrują do serwerów w USA, ale Google działa zgodnie z unijno-amerykańskim
+          Data Privacy Framework, więc poziom ochrony jest odpowiedni.
+        </p>
+      </div>
+
+      <div class="legal-section" id="cookies">
+        <h2>Pliki cookies</h2>
+        <p>
+          Używamy wyłącznie cookies analitycznych Google Analytics — żadnych reklamowych,
+          żadnej sprzedaży danych. Możesz wybrać swoje preferencje w bannerze, który pojawia się
+          przy pierwszej wizycie.
+        </p>
+
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Cookie</th>
+              <th>Co robi</th>
+              <th>Ważność</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>_ga</strong><br><span style="color: var(--text-3); font-size: 13px;">Google Analytics</span></td>
+              <td>Rozróżnia unikalnych użytkowników.</td>
+              <td>2 lata</td>
+            </tr>
+            <tr>
+              <td><strong>_ga_XXXXXXXX</strong><br><span style="color: var(--text-3); font-size: 13px;">Google Analytics</span></td>
+              <td>Przechowuje stan sesji GA4.</td>
+              <td>2 lata</td>
+            </tr>
+            <tr>
+              <td><strong>_gid</strong><br><span style="color: var(--text-3); font-size: 13px;">Google Analytics</span></td>
+              <td>Rozróżnia użytkowników w ciągu doby.</td>
+              <td>24 godz.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px;">
+          Chcesz wyłączyć analitykę całkowicie? Zainstaluj
+          <a href="https://tools.google.com/dlpage/gaoptout" class="accent-link" target="_blank" rel="noopener">dodatek Google Analytics Opt-out</a>
+          lub zmień preferencje w ustawieniach przeglądarki. Strona działa normalnie bez cookies.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Dane rejestrowe</h2>
+        <p>Pełne dane rejestrowe obu firm prowadzących serwis (wymagane prawem):</p>
+        <div class="dane-grid">
+          <div class="dane-card">
+            <div class="dane-card-name">Agnieszka Kopeć<br>Centrum Edukacji MATHrix</div>
+            <div class="dane-row"><span class="dane-label">NIP</span><span class="dane-value">6793167694</span></div>
+            <div class="dane-row"><span class="dane-label">REGON</span><span class="dane-value">369856560</span></div>
+            <div class="dane-row"><span class="dane-label">Adres rejestrowy</span><span class="dane-value">ul. Kotlarska 10, 31-539 Kraków</span></div>
+            <div class="dane-row"><span class="dane-label">Forma prawna</span><span class="dane-value">Indywidualna działalność gospodarcza</span></div>
+            <div class="dane-row"><span class="dane-label">Działalność od</span><span class="dane-value">05.04.2018</span></div>
+          </div>
+          <div class="dane-card">
+            <div class="dane-card-name">Mateusz Kopeć<br>Centrum Edukacji MATHrix</div>
+            <div class="dane-row"><span class="dane-label">NIP</span><span class="dane-value">6793189164</span></div>
+            <div class="dane-row"><span class="dane-label">REGON</span><span class="dane-value">384259884</span></div>
+            <div class="dane-row"><span class="dane-label">Adres rejestrowy</span><span class="dane-value">ul. Kotlarska 10, 31-539 Kraków</span></div>
+            <div class="dane-row"><span class="dane-label">Forma prawna</span><span class="dane-value">Indywidualna działalność gospodarcza</span></div>
+            <div class="dane-row"><span class="dane-label">Działalność od</span><span class="dane-value">04.09.2019</span></div>
+          </div>
+        </div>
+        <p style="margin-top: 16px; color: var(--text-3); font-size: 13px;">
+          Politykę możemy aktualizować — datę ostatniej zmiany znajdziesz na górze strony.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logo-icon.svg" alt="MATHrix" class="footer-logo">
+          <p class="footer-name">Centrum Edukacji MATHrix</p>
+        </div>
+        <div class="footer-col">
+          <p>Kotlarska 10/10<br>31-539 Kraków</p>
+          <p>577 859 242 &nbsp;·&nbsp; 732 733 048</p>
+          <p>mathrix.krakow@gmail.com</p>
+        </div>
+        <div class="footer-col footer-social-col">
+          <a href="https://www.facebook.com/Centrum.Edukacji.MATHrix"
+             target="_blank" rel="noopener"
+             class="footer-social" aria-label="MATHrix na Facebooku">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <script>document.write(new Date().getFullYear())</script> Centrum Edukacji MATHrix. Wszelkie prawa zastrzeżone.</p>
+        <a href="v2.html" class="footer-v-link">← Strona główna</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/cookies.js"></script>
+
+  <div id="cookie-banner" role="dialog" aria-label="Zgoda na pliki cookies" aria-live="polite">
+    <p class="cookie-banner-text">
+      <strong>Używamy plików cookies.</strong>
+      Strona korzysta z Google Analytics do analizy ruchu. Możesz zaakceptować cookies
+      analityczne lub ograniczyć się do niezbędnych.
+      <a href="polityka-prywatnosci.html#cookies">Dowiedz się więcej</a>
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-decline" class="cookie-btn-decline">Tylko niezbędne</button>
+      <button id="cookie-accept"  class="cookie-btn-accept">Akceptuję</button>
+    </div>
+  </div>
+
+  <script>
+    const saved = localStorage.getItem('mathrix-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  </script>
+</body>
+</html>

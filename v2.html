@@ -7,11 +7,14 @@
   <meta name="description" content="Centrum Edukacji MATHrix w Krakowie – korepetycje z matematyki indywidualne i grupowe, kursy maturalne. Doświadczona kadra, świetna atmosfera, indywidualne podejście.">
   <link rel="icon" href="assets/images/logo.png">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6208XL6E9"></script>
+  <!-- Google Analytics – Consent Mode v2 (denied by default until user accepts) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied' });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6208XL6E9"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-Z6208XL6E9');
   </script>
@@ -21,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/v2.css">
+  <link rel="stylesheet" href="assets/css/legal.css">
 </head>
 <body>
 
@@ -347,8 +351,8 @@
               </tbody>
             </table>
           </div>
-          <a href="assets/docs/regulamin-indywidualne.pdf" target="_blank" rel="noopener" class="pdf-link">
-            <i class="fa-solid fa-file-pdf"></i>
+          <a href="regulamin-indywidualne.html" class="pdf-link">
+            <i class="fa-solid fa-file-lines"></i>
             Regulamin korepetycji indywidualnych
           </a>
         </div>
@@ -382,8 +386,8 @@
               </tbody>
             </table>
           </div>
-          <a href="assets/docs/regulamin-grupowe.pdf" target="_blank" rel="noopener" class="pdf-link">
-            <i class="fa-solid fa-file-pdf"></i>
+          <a href="regulamin-grupowe.html" class="pdf-link">
+            <i class="fa-solid fa-file-lines"></i>
             Regulamin korepetycji grupowych
           </a>
         </div>
@@ -414,8 +418,8 @@
               </tbody>
             </table>
           </div>
-          <a href="assets/docs/regulamin-kursy.pdf" target="_blank" rel="noopener" class="pdf-link">
-            <i class="fa-solid fa-file-pdf"></i>
+          <a href="regulamin-kursy.html" class="pdf-link">
+            <i class="fa-solid fa-file-lines"></i>
             Regulamin kursów maturalnych
           </a>
         </div>
@@ -687,15 +691,40 @@
         <div class="footer-brand">
           <img src="assets/images/logo-icon.svg" alt="MATHrix" class="footer-logo">
           <p class="footer-name">Centrum Edukacji MATHrix</p>
+          <p class="footer-tagline">Korepetycje i kursy maturalne<br>z matematyki i fizyki w Krakowie.</p>
         </div>
 
         <div class="footer-col">
-          <p>Kotlarska 10/10<br>31-539 Kraków</p>
-          <p>577 859 242 &nbsp;·&nbsp; 732 733 048</p>
-          <p>mathrix.krakow@gmail.com</p>
+          <p class="footer-col-title">Kontakt</p>
+          <div class="footer-contact-row">
+            <a href="https://maps.google.com/?q=Kotlarska+10,+Kraków" target="_blank" rel="noopener" class="footer-text-link">Kotlarska 10/10</a>
+            <button class="copy-btn" data-copy="Kotlarska 10/10" aria-label="Kopiuj adres"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <p class="footer-contact-sub">31-539 Kraków</p>
+          <div class="footer-contact-row">
+            <a href="tel:+48577859242" class="footer-text-link">577 859 242</a>
+            <button class="copy-btn" data-copy="577859242" aria-label="Kopiuj numer"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <div class="footer-contact-row">
+            <a href="tel:+48732733048" class="footer-text-link">732 733 048</a>
+            <button class="copy-btn" data-copy="732733048" aria-label="Kopiuj numer"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <div class="footer-contact-row">
+            <a href="mailto:mathrix.krakow@gmail.com" class="footer-text-link">mathrix.krakow@gmail.com</a>
+            <button class="copy-btn" data-copy="mathrix.krakow@gmail.com" aria-label="Kopiuj e-mail"><i class="fa-regular fa-copy"></i></button>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Dokumenty</p>
+          <ul class="footer-links">
+            <li><a href="regulaminy.html">Regulaminy</a></li>
+            <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+          </ul>
         </div>
 
         <div class="footer-col footer-social-col">
+          <p class="footer-col-title">Social</p>
           <a href="https://www.facebook.com/Centrum.Edukacji.MATHrix"
              target="_blank" rel="noopener"
              class="footer-social" aria-label="MATHrix na Facebooku">
@@ -705,12 +734,27 @@
 
       </div>
       <div class="footer-bottom">
-        <p>© <span id="footer-year"></span> Centrum Edukacji MATHrix. Wszelkie prawa zastrzeżone.</p>
+        <p>© <span id="footer-year"></span> Centrum Edukacji MATHrix &nbsp;·&nbsp; NIP: 6793167694 / 6793189164</p>
         <a href="index.html" class="footer-v-link">← Wersja 1</a>
       </div>
     </div>
   </footer>
 
   <script src="assets/js/v2.js"></script>
+  <script src="assets/js/cookies.js"></script>
+
+  <!-- ═══════════════════════ COOKIE BANNER ═══════════════════════════════ -->
+  <div id="cookie-banner" role="dialog" aria-label="Zgoda na pliki cookies" aria-live="polite">
+    <p class="cookie-banner-text">
+      <strong>Używamy plików cookies.</strong>
+      Strona korzysta z Google Analytics do analizy ruchu. Możesz zaakceptować cookies
+      analityczne lub ograniczyć się do niezbędnych.
+      <a href="polityka-prywatnosci.html#cookies">Dowiedz się więcej</a>
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-decline" class="cookie-btn-decline">Tylko niezbędne</button>
+      <button id="cookie-accept"  class="cookie-btn-accept">Akceptuję</button>
+    </div>
+  </div>
 </body>
 </html>
