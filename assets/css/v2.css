@@ -198,8 +198,8 @@
 .hero::after {
   content: '∑';
   position: absolute;
-  right: 4%;
-  bottom: 6%;
+  right: 16%;
+  bottom: 22%;
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(12rem, 22vw, 28rem);
   font-weight: 800;
