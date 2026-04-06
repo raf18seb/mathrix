@@ -185,17 +185,29 @@
 /* ─── Team bio expand/collapse ───────────────────────────────────────────── */
 
 (function initTeamBio() {
-  const toggles = document.querySelectorAll('.team-toggle');
-  if (!toggles.length) return;
+  const cards = document.querySelectorAll('.team-card');
+  if (!cards.length) return;
 
-  toggles.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('.team-card');
+  cards.forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', e => {
+      // unikamy podwójnego triggera gdy klik trafi bezpośrednio w button
+      if (e.target.closest('.team-toggle')) return;
+
+      const btn = card.querySelector('.team-toggle');
       const isOpen = card.classList.contains('bio-open');
-
       card.classList.toggle('bio-open', !isOpen);
-      btn.setAttribute('aria-expanded', String(!isOpen));
+      if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
     });
+
+    const btn = card.querySelector('.team-toggle');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const isOpen = card.classList.contains('bio-open');
+        card.classList.toggle('bio-open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
   });
 })();
 

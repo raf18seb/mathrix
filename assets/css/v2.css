@@ -335,6 +335,13 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
   line-height: 1.7;
 }
 
+.accent-link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.accent-link:hover { opacity: 0.75; text-decoration: underline; }
+
 .text-gradient {
   background: var(--grad-text);
   -webkit-background-clip: text;
