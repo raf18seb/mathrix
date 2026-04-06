@@ -4,6 +4,29 @@
 
 'use strict';
 
+/* ─── Density switcher ───────────────────────────────────────────────────── */
+
+(function initDensity() {
+  const saved = localStorage.getItem('mathrix-density') || 'normal';
+  document.documentElement.setAttribute('data-density', saved);
+
+  const btns = document.querySelectorAll('.density-btn');
+  btns.forEach(btn => {
+    if (btn.dataset.density === saved) {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    btn.addEventListener('click', () => {
+      const density = btn.dataset.density;
+      document.documentElement.setAttribute('data-density', density);
+      localStorage.setItem('mathrix-density', density);
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+})();
+
+
 /* ─── Theme switcher ─────────────────────────────────────────────────────── */
 
 (function initTheme() {

@@ -525,6 +525,44 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
   color: var(--accent);
 }
 
+/* Density switcher */
+.density-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.density-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-3);
+  padding: 4px 7px;
+  line-height: 1;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.density-btn:nth-child(1) { font-size: 14px; }
+.density-btn:nth-child(2) { font-size: 11px; }
+.density-btn:nth-child(3) { font-size: 9px;  }
+
+.density-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.density-btn:not(.active):hover {
+  color: var(--accent);
+  background: var(--badge-bg);
+}
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -537,8 +575,8 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
 .theme-switcher {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 10px;
+  gap: 7px;
+  padding: 5px 8px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 20px;
@@ -546,8 +584,8 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
 }
 
 .theme-dot {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
@@ -795,6 +833,16 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: start;
+}
+
+.kursy-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.kursy-left .section-header {
+  margin-bottom: 32px;
+  text-align: left;
 }
 
 .kursy-features {
@@ -1280,7 +1328,17 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 64px;
-  align-items: start;
+  align-items: stretch;
+}
+
+.kontakt-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.kontakt-left .section-header {
+  margin-bottom: 32px;
+  text-align: left;
 }
 
 .kontakt-info {
@@ -1369,14 +1427,24 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
 }
 
-.map-img {
+.map-iframe {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  flex: 1;
   display: block;
-  min-height: 380px;
+  min-height: 340px;
+  border: none;
+  /* Ciemny filtr pasujący do dark themes — inwertuje mapę i obraca odcień */
+  filter: invert(92%) hue-rotate(180deg) saturate(0.6) brightness(0.88);
+}
+
+/* Na jasnych motywach przywracamy naturalny wygląd mapy */
+[data-theme="light-modern"] .map-iframe,
+[data-theme="light-warm"]   .map-iframe {
+  filter: none;
 }
 
 
@@ -1788,3 +1856,29 @@ header, nav, section, footer, .card, .kurs-card, .review-card,
     gap: 8px;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DENSITY OVERRIDES
+   Activated by data-density="compact" | "dense" on <html>
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* zoom skaluje absolutnie wszystko (fonty, padding, ikony) —
+   działa nawet na wartości px, w przeciwieństwie do font-size na :root */
+
+[data-density="compact"] {
+  zoom: 0.9;
+}
+/* Dodatkowa redukcja odstępów — żeby więcej się mieściło na ekranie */
+[data-density="compact"] .section        { padding: 84px 0; }
+[data-density="compact"] .section-header { margin-bottom: 48px; }
+[data-density="compact"] .hero           { padding: 100px 0 64px; }
+[data-density="compact"] .stats-strip    { padding: 44px 0; }
+
+[data-density="dense"] {
+  zoom: 0.8;
+}
+[data-density="dense"] .section          { padding: 60px 0; }
+[data-density="dense"] .section-header   { margin-bottom: 32px; }
+[data-density="dense"] .hero             { padding: 72px 0 48px; min-height: unset; }
+[data-density="dense"] .stats-strip      { padding: 30px 0; }

@@ -58,6 +58,12 @@
         <a href="v2.html"    class="dev-versions__btn active">v2</a>
       </div>
 
+      <div class="density-switcher" id="density-switcher" aria-label="Rozmiar widoku">
+        <button class="density-btn active" data-density="normal"  title="Normalny">A</button>
+        <button class="density-btn"        data-density="compact" title="Kompaktowy">A</button>
+        <button class="density-btn"        data-density="dense"   title="Gęsty">A</button>
+      </div>
+
       <div class="nav-right">
         <div class="theme-switcher" aria-label="Wybierz motyw kolorystyczny">
           <button class="theme-dot active" data-theme="dark-premium"
@@ -204,13 +210,14 @@
     <section id="kursy" class="section section-alt">
       <div class="container">
 
-        <header class="section-header">
-          <p class="section-tag reveal">Kursy Maturalne</p>
-          <h2 class="section-title reveal">Matura z matematyki<br>nie musi być traumą.</h2>
-          <p class="section-lead reveal">90% naszych kursantów wychodzi z egzaminu zadowolonych. Online, w małej grupie, z planem — nie z nadzieją.</p>
-        </header>
-
         <div class="kursy-layout">
+
+          <div class="kursy-left">
+            <header class="section-header">
+              <p class="section-tag reveal">Kursy Maturalne</p>
+              <h2 class="section-title reveal">Matura z matematyki<br>nie musi być traumą.</h2>
+              <p class="section-lead reveal">90% naszych kursantów wychodzi z egzaminu zadowolonych. Online, w małej grupie, z planem — nie z nadzieją.</p>
+            </header>
 
           <ul class="kursy-features reveal">
             <li>
@@ -242,6 +249,7 @@
               <div><strong>Wiesz, co przerabiasz i kiedy</strong> – przejrzysty plan na cały rok, bez niespodzianek tydzień przed maturą.</div>
             </li>
           </ul>
+          </div><!-- /.kursy-left -->
 
           <div class="kursy-cards reveal">
             <div class="kurs-card">
@@ -602,13 +610,14 @@
     <section id="kontakt" class="section section-alt">
       <div class="container">
 
-        <header class="section-header">
-          <p class="section-tag reveal">Kontakt</p>
-          <h2 class="section-title reveal">Masz pytanie? Zadzwoń.</h2>
-          <p class="section-lead reveal">Bez presji, bez pakietów na siłę — po prostu porozmawiamy i razem dobierzemy najlepszą formę zajęć.</p>
-        </header>
-
         <div class="kontakt-layout">
+
+          <div class="kontakt-left">
+            <header class="section-header">
+              <p class="section-tag reveal">Kontakt</p>
+              <h2 class="section-title reveal">Masz pytanie? Zadzwoń.</h2>
+              <p class="section-lead reveal">Bez presji, bez pakietów na siłę — po prostu porozmawiamy i razem dobierzemy najlepszą formę zajęć.</p>
+            </header>
 
           <div class="kontakt-info reveal">
 
@@ -670,11 +679,17 @@
             </div>
 
           </div>
+          </div><!-- /.kontakt-left -->
 
           <div class="kontakt-map reveal">
-            <img src="assets/images/mapa.svg"
-                 alt="Mapa – Centrum Edukacji MATHrix, Kotlarska 10/10, Kraków"
-                 class="map-img" loading="lazy">
+            <iframe
+              class="map-iframe"
+              src="https://maps.google.com/maps?q=Kotlarska+10,+Krak%C3%B3w&t=m&z=15&ie=UTF8&iwloc=&output=embed"
+              title="Mapa – Centrum Edukacji MATHrix, Kotlarska 10/10, Kraków"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              aria-label="Mapa dojazdu do MATHrix"></iframe>
           </div>
 
         </div>
